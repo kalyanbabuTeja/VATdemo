@@ -1,0 +1,71 @@
+<section>
+    <!-- (22) Details of All Applicants -->
+    <fieldset class="border p-3 mb-4">
+        <legend class="w-auto px-2">(22) Details of all Applicants</legend>
+
+        <div class="table-responsive mb-3">
+            <table class="table table-bordered table-sm" id="applicantDetailsTable">
+                <thead class="table-light">
+                    <tr>
+                        <th>View / Edit</th>
+                        <th>Sr. No.</th>
+                        <th>Mr./Ms./M/s</th>
+                        <th>Name of the Applicant / Authorized Signatory</th>
+                        <th>Status</th>
+                        <th>Authorized to Apply on Behalf</th>
+                        <th>Digital Signature Available</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+
+        <!-- New Applicant Entry -->
+        <div class="row mb-2">
+            <div class="col-md-3">
+                <label for="applicantTitle" class="form-label">Mr./Ms./M/s<span class="text-danger">*</span></label>
+                <select id="applicantTitle" class="form-select form-select-sm">
+                    <option disabled selected value="">Select</option>
+                    <option>Mr.</option>
+                    <option>Ms.</option>
+                    <option>M/s</option>
+                </select>
+            </div>
+            <div class="col-md-3">
+                <label for="applicantName" class="form-label">Name of the
+                    Applicant
+                    /
+                    Authorized
+                    Signatory<span class="text-danger">*</span></label>
+                <input type="text" id="applicantName" class="form-control form-control-sm">
+            </div>
+            <div class="col-md-3">
+                <label for="applicantStatus" class="form-label">Status<span class="text-danger">*</span></label>
+                <select id="applicantStatus" class="form-select form-select-sm">
+                    <option disabled selected value="">Select</option>
+                    <option>CEO</option>
+                    <option>Director</option>
+                    <option>Partner</option>
+                    <!-- add more as needed -->
+                </select>
+            </div>
+            <div class="col-md-3">
+                <label class="form-label">Digital Signature Available?<span class="text-danger">*</span></label>
+                <select id="applicantDigital" class="form-select form-select-sm">
+                    <option disabled selected value="">Select</option>
+                    <option>Yes</option>
+                    <option>No</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="row g-2 mb-3 justify-content-center">
+            <div class="col-auto text-center">
+                <button type="button" id="applicantSaveBtn" class="btn btn-primary me-2">Save</button>
+                <button type="button" id="applicantClearBtn" class="btn btn-secondary me-2">Clear</button>
+                <button type="button" id="applicantDeleteBtn" class="btn btn-danger me-2">Delete</button>
+            </div>
+        </div>
+    </fieldset>
+</section>
+<!-- <p>applicant-details works!</p> -->

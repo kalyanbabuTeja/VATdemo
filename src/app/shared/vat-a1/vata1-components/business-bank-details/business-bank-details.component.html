@@ -1,0 +1,129 @@
+<section>
+    <!-- (15) Script in which books of accounts maintained -->
+    <div class="mb-3 d-flex justify-content-between align-items-center">
+        <label for="booksScript" class="form-label mb-0" style="width: 50%;">
+            (15) Script in which books of accounts are maintained <span class="text-danger">*</span>
+        </label>
+        <select id="booksScript" class="form-select form-select-sm ms-2" style="width: 50%;" required>
+            <option disabled selected value="">Select</option>
+            <option>Devnagari</option>
+            <option>English</option>
+            <option>Gurmukhi</option>
+            <option>Landa</option>
+        </select>
+    </div>
+    <!-- (16) Business maintains its books of accounts as -->
+    <div class="mb-3 d-flex justify-content-between align-items-center">
+        <label for="booksMaintainedAs" class="form-label mb-0" style="width: 50%;">
+            (16) The Business maintains its books of accounts as <span class="text-danger">*</span>
+        </label>
+        <select id="booksMaintainedAs" class="form-select form-select-sm ms-2" style="width: 50%;" required>
+            <option disabled selected value="">Select</option>
+            <option>Computerized</option>
+            <option>Manual</option>
+        </select>
+    </div>
+
+    <!-- (17) Sale invoices are issued -->
+    <div class="mb-3 d-flex justify-content-between align-items-center">
+        <label for="saleInvoicesIssued" class="form-label mb-0" style="width: 50%;">
+            (17) Sale invoices are issued <span class="text-danger">*</span>
+        </label>
+        <select id="saleInvoicesIssued" class="form-select form-select-sm ms-2" style="width: 50%;" required>
+            <option disabled selected value="">Select</option>
+            <option>System generated</option>
+            <option>Manually</option>
+        </select>
+    </div>
+
+    <!-- (20) Details of Bank Accounts of the Business -->
+    <fieldset class="border p-3 mb-4">
+        <legend class="w-auto px-2">(20) Details of Bank Accounts of the
+            Business
+        </legend>
+
+
+
+        <!-- New Bank Account Entry -->
+        <div class="row mb-2">
+            <div class="col-md-3">
+                <label for="bankName" class="form-label">Bank Name<span class="text-danger">*</span></label>
+            </div>
+            <div class="col-md-3">
+                <select id="bankName" class="form-select form-select-sm" required>
+                    <option disabled selected value="">Select</option>
+                    <option value="sbi">STATE BANK OF INDIA</option>
+                    <option value="hdfc">HDFC BANK</option>
+                    <option>ABHYUDAYA COP BANK</option>
+                    <option>ABN AMRO BANK</option>
+                    <!-- Add more as needed -->
+                </select>
+            </div>
+            <div class="col-md-3">
+                <label for="accountType" class="form-label">Type of Account<span class="text-danger">*</span></label>
+            </div>
+            <div class="col-md-3">
+                <select id="accountType" class="form-select form-select-sm" required>
+                    <option disabled selected value="">Select</option>
+                    <option>Current Account</option>
+                    <option>Savings Account</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="row mb-2">
+            <div class="col-md-3">
+                <label for="accountNumber" class="form-label">Account
+                    Number<span class="text-danger">*</span></label>
+            </div>
+            <div class="col-md-3">
+                <input type="text" id="accountNumber" class="form-control form-control-sm" required>
+            </div>
+            <div class="col-md-3">
+                <label for="ifscCode" class="form-label">IFSC Code<span class="text-danger">*</span></label>
+            </div>
+            <div class="col-md-3">
+                <input type="text" id="ifscCode" class="form-control form-control-sm" required>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-3">
+                <label for="branchAddress" class="form-label">Branch Name &
+                    Address<span class="text-danger">*</span></label>
+            </div>
+            <div class="col-md-9">
+                <input type="text" id="branchAddress" class="form-control form-control-sm" required>
+            </div>
+        </div>
+        <br>
+
+        <div class="table-responsive mb-3">
+            <table class="table table-bordered table-sm" id="bankDetailsTable">
+                <thead class="table-light">
+                    <tr>
+                        <th>Select</th>
+                        <th>View / Edit</th>
+                        <th>Sr. No.</th>
+                        <th>Bank Name</th>
+                        <th>Branch Name & Address</th>
+                        <th>Type of Account</th>
+                        <th>Account Number</th>
+                        <th>IFSC Code</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="row g-2 mb-3 justify-content-center">
+            <div class="col-auto text-center">
+                <button class="btn btn-primary me-2" type="button" id="saveBankBtn">Save</button>
+                <button class="btn btn-secondary me-2" type="button" id="clearBankBtn">Clear</button>
+                <button class="btn btn-danger" type="button" id="deleteBankBtn">Delete</button>
+            </div>
+        </div>
+    </fieldset>
+</section>
+<!-- <p>business-bank-details works!</p> -->

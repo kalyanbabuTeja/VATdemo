@@ -1,0 +1,312 @@
+<section>
+    <div class="border p-3"
+        style="background-color: #f5faff; border-radius: 8px; width: 100%;">
+
+        <h6 class="text-primary">Annexure II</h6>
+        <h5 class="text-center fw-bold">Details of additional places of Business
+        </h5>
+
+        <div class="form-check mb-3">
+            <input class="form-check-input" type="checkbox" id="annexureNotApplicable">
+            <label class="form-check-label" for="annexureNotApplicable">
+                Tick if Annexure Not Applicable
+            </label>
+        </div>
+
+        <!-- Section 1 -->
+        <fieldset class="border p-3 mb-4">
+            <legend class="w-auto px-2 fw-bold">(1) Details of additional places of
+                Business in
+                the
+                State of Haryana</legend>
+
+            <div class="table-responsive mb-3">
+                <table class="table table-bordered table-sm text-center align-middle">
+                    <thead class="table-primary">
+                        <tr>
+                            <th>Select</th>
+                            <th>View / Edit</th>
+                            <th>Sr. No.</th>
+                            <th>Type of Business Place</th>
+                            <th>Whether Owned/ Rented/ Leased</th>
+                            <th>Whether Invoices are issued from this premise</th>
+                            <th>Address</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td colspan="7">To populate details in this section,
+                                please
+                                enter
+                                values
+                                in the field(s) below and click on "Save"</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="row mb-2">
+                <div class="col-md-4">
+                    <label class="form-label">Type of Business Place</label>
+                    <select class="form-select form-select-sm">
+                        <option selected disabled>Select</option>
+                        <option>Warehouse</option>
+                        <option>Branch Office</option>
+                        <!-- Add more -->
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label">Whether Owned/Rented/Leased</label>
+                    <select class="form-select form-select-sm">
+                        <option selected disabled>Select</option>
+                        <option>Owned</option>
+                        <option>Rented</option>
+                        <option>Leased</option>
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label">Whether Invoices are issued from this
+                        premise</label>
+                    <select class="form-select form-select-sm">
+                        <option selected disabled>Select</option>
+                        <option>Yes</option>
+                        <option>No</option>
+                    </select>
+                </div>
+            </div>
+
+            <h6 class="bg-primary text-white p-2 rounded">Address</h6>
+            <div class="row g-2">
+                <div class="col-md-3">
+                    <input type="text" class="form-control form-control-sm"
+                        placeholder="SCO/Booth/Flat No.">
+                </div>
+                <div class="col-md-3">
+                    <input type="text" class="form-control form-control-sm"
+                        placeholder="Building / Street / Lane">
+                </div>
+                <div class="col-md-3">
+                    <input type="text" class="form-control form-control-sm"
+                        placeholder="Sector/Area">
+                </div>
+                <div class="col-md-3">
+                    <input type="text" class="form-control form-control-sm"
+                        placeholder="City/Town/Village">
+                </div>
+                <div class="col-md-3">
+                    <input type="text" class="form-control form-control-sm"
+                        placeholder="Post Office">
+                </div>
+                <div class="col-md-3">
+                    <select class="form-select form-select-sm">
+                        <option selected disabled>Select District</option>
+                        <option>Gurgaon</option>
+                        <option>Faridabad</option>
+                    </select>
+                </div>
+                <div class="col-md-3">
+                    <select class="form-select form-select-sm">
+                        <option selected>Haryana</option>
+                    </select>
+                </div>
+                <div class="col-md-3">
+                    <input type="text" class="form-control form-control-sm"
+                        placeholder="Pin Code">
+                </div>
+                <div class="col-md-3">
+                    <input type="text" class="form-control form-control-sm" value="India"
+                        readonly>
+                </div>
+                <div class="col-md-3">
+                    <input type="text" class="form-control form-control-sm"
+                        placeholder="Telephone No.">
+                </div>
+                <div class="col-md-3">
+                    <input type="text" class="form-control form-control-sm"
+                        placeholder="FAX No.">
+                </div>
+                <div class="col-md-3">
+                    <input type="text" class="form-control form-control-sm"
+                        placeholder="Mobile No.">
+                </div>
+                <div class="col-md-3">
+                    <input type="email" class="form-control form-control-sm"
+                        placeholder="Email Address">
+                </div>
+                <div class="col-md-3">
+                    <input type="text" class="form-control form-control-sm"
+                        placeholder="Ward">
+                </div>
+                <div>
+                    <br>
+                </div>
+            </div>
+
+            <div class="row g-2 mb-3 justify-content-center">
+                <div class="col-auto text-center">
+                    <button class="btn btn-primary me-2" type="button"
+                        id="saveBtn">Save</button>
+                    <button class="btn btn-secondary me-2" type="button"
+                        id="clearBtn">Clear</button>
+                    <button class="btn btn-danger" type="button"
+                        id="deleteBtn">Delete</button>
+                </div>
+            </div>
+        </fieldset>
+
+        <!-- Section 2 -->
+        <fieldset class="border p-3 mb-4">
+            <legend class="w-auto px-2 fw-bold">(2) Details of additional places of
+                Business
+                outside
+                the State of Haryana</legend>
+
+            <div class="table-responsive mb-3">
+                <table class="table table-bordered table-sm text-center align-middle">
+                    <thead class="table-primary">
+                        <tr>
+                            <th>Select</th>
+                            <th>View / Edit</th>
+                            <th>Sr. No.</th>
+                            <th>Type of Business Place</th>
+                            <th>Whether Owned/ Rented/ Leased</th>
+                            <th>Whether Invoices are issued from this premise</th>
+                            <th>Address</th>
+                            <th>Ward</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td colspan="8">To populate details in this section,
+                                please
+                                enter
+                                values
+                                in the field(s) below and click on "Save"</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="row mb-2">
+                <div class="col-md-4">
+                    <label class="form-label">Type of Business Place</label>
+                    <select class="form-select form-select-sm">
+                        <option>Warehouse</option>
+                        <option>Branch Office</option>
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label">Whether Owned/Rented/Leased</label>
+                    <select class="form-select form-select-sm">
+                        <option>Owned</option>
+                        <option>Rented</option>
+                        <option selected>Leased</option>
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label">Whether Invoices are issued from
+                        premise</label>
+                    <select class="form-select form-select-sm">
+                        <option selected disabled>Select</option>
+                        <option>Yes</option>
+                        <option>No</option>
+                    </select>
+                </div>
+            </div>
+
+            <h6 class="bg-primary text-white p-2 rounded">Address</h6>
+            <div class="row g-2">
+                <div class="col-md-3">
+                    <input type="text" class="form-control form-control-sm"
+                        placeholder="SCO/Booth/Shop/Building /Flat/Floor/Door No.">
+                </div>
+                <div class="col-md-3">
+                    <input type="text" class="form-control form-control-sm"
+                        placeholder="Building Name/Mohalla/Colony /Market Place/Street/Lane">
+                </div>
+                <div class="col-md-3">
+                    <input type="text" class="form-control form-control-sm"
+                        placeholder="Sector/Area">
+                </div>
+                <div class="col-md-3">
+                    <input type="text" class="form-control form-control-sm"
+                        placeholder="City/Town/Village">
+                </div>
+                <div class="col-md-3">
+                    <input type="text" class="form-control form-control-sm"
+                        placeholder="Post Office">
+                </div>
+                <div class="col-md-3">
+                    <select class="form-select form-select-sm">
+                        <option selected>Other</option>
+                    </select>
+                </div>
+                <div class="col-md-3">
+                    <input type="text" class="form-control form-control-sm"
+                        placeholder="Please mention the District">
+                </div>
+                <div class="col-md-3">
+                    <select class="form-select form-select-sm">
+                        <option selected disabled>Select State</option>
+                        <option>Maharashtra</option>
+                        <option>Karnataka</option>
+                        <option>Tamil Nadu</option>
+                        <!-- Add more as needed -->
+                    </select>
+                </div>
+                <div class="col-md-3">
+                    <input type="text" class="form-control form-control-sm"
+                        placeholder="Pin Code">
+                </div>
+                <div class="col-md-3">
+                    <input type="text" class="form-control form-control-sm" value="India"
+                        readonly>
+                </div>
+                <div class="col-md-3">
+                    <input type="text" class="form-control form-control-sm"
+                        placeholder="Telephone No.">
+                </div>
+                <div class="col-md-3 d-flex">
+                    <span class="input-group-text p-1 pe-2">+91</span>
+                    <input type="text" class="form-control form-control-sm"
+                        placeholder="Mobile No.">
+                </div>
+                <div class="col-md-3 d-flex">
+                    <span class="input-group-text p-1 pe-2">+91</span>
+                    <input type="text" class="form-control form-control-sm"
+                        placeholder="FAX No.">
+                </div>
+                <div class="col-md-3">
+                    <input type="email" class="form-control form-control-sm"
+                        placeholder="E-mail Address">
+                </div>
+                <div class="col-md-3">
+                    <input type="text" class="form-control form-control-sm"
+                        placeholder="TIN in the respective State">
+                </div>
+                <div class="col-md-3">
+                    <input type="text" class="form-control form-control-sm"
+                        placeholder="Ward">
+                </div>
+            </div>
+            <br>
+            <div class="row g-2 mb-3 justify-content-center">
+                <div class="col-auto text-center">
+                    <button class="btn btn-primary me-2" type="button"
+                        id="saveBtn">Save</button>
+                    <button class="btn btn-secondary me-2" type="button"
+                        id="clearBtn">Clear</button>
+                    <button class="btn btn-danger" type="button"
+                        id="deleteBtn">Delete</button>
+                </div>
+            </div>
+
+            <div class="text-center mt-3">
+                <button class="btn btn-outline-primary">Validate Annexure
+                    II</button>
+            </div>
+        </fieldset>
+
+    </div>
+
+</section>

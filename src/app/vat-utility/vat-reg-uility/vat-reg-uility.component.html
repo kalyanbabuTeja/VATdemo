@@ -1,0 +1,57 @@
+<div class="container-fluid">
+	<section>
+		<div class="container-fluid">
+			<!-- Logo Row -->
+			<div class="row py-3 align-items-center">
+				<div class="col-md-4">
+					<img src="/images/logo.png" class="img-fluid" alt="Logo">
+				</div>
+			</div>
+
+			<!-- Tabs Section -->
+			<div class="tabs tabs-style-shape my-4">
+				<!-- Tab Header -->
+				<div class="tab-container">
+					<div class="tab" *ngFor="let tab of tabs" [class.active]="tab === activeTab" (click)="selectTab(tab)">
+						<span class="tab-icon">{{ tab.icon }}</span> 
+						<span class="tab-label">{{ tab.label }}</span>
+					</div>
+				</div>
+				<div class="tab-content-wrapper">
+					<ng-container [ngSwitch]="activeTab.label">
+
+						<div *ngSwitchCase="'Instructions'" class="tab-content">
+							<app-instruction></app-instruction>
+						</div>
+
+						<div *ngSwitchCase="'VAT A1'" class="tab-content">
+							<app-vat-a1></app-vat-a1>
+						</div>
+
+						<div *ngSwitchCase="'Annexure I'" class="tab-content">
+							<app-annexure1></app-annexure1>
+						</div>
+
+						<div *ngSwitchCase="'Annexure II'" class="tab-content">
+							<app-annexure2></app-annexure2>
+						</div>
+
+						<div *ngSwitchCase="'Annexure III'" class="tab-content">
+							<app-annexure3></app-annexure3>
+						</div>
+						<div *ngSwitchCase="'Annexure V'" class="tab-content">
+							<app-annexure5></app-annexure5>
+						</div>
+						<div *ngSwitchCase="'Annexure VI'" class="tab-content">
+							<app-annexure6></app-annexure6>
+						</div>
+						<div *ngSwitchCase="'CST Form A'" class="tab-content">
+							<app-cst-form-a></app-cst-form-a>
+						</div>
+
+					</ng-container>
+				</div>
+			</div>
+		</div>
+	</section>
+</div>

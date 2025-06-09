@@ -1,0 +1,65 @@
+<section>
+    <!-- (23) Details of Persons Authorized for Interface with the Department -->
+    <fieldset class="border p-3 mb-4">
+        <legend class="w-auto px-2">(23) Details of Persons Authorized for
+            Interface
+            with
+            the
+            Department</legend>
+
+        <div class="table-responsive mb-3">
+            <table class="table table-bordered table-sm" id="interfaceDetailsTable">
+                <thead class="table-light">
+                    <tr>
+                        <th>Select</th>
+                        <th>View / Edit</th>
+                        <th>Sr. No.</th>
+                        <th>Mr./Ms.</th>
+                        <th>Name</th>
+                        <th>Designation</th>
+                        <th>Digital Signature Available</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+
+        <!-- New Interface Entry -->
+        <div class="row mb-2">
+            <div class="col-md-3">
+                <label for="interfaceTitle" class="form-label">Mr./Ms.<span class="text-danger">*</span></label>
+                <select id="interfaceTitle" class="form-select form-select-sm">
+                    <option disabled selected value="">Select</option>
+                    <option>Mr.</option>
+                    <option>Ms.</option>
+                </select>
+            </div>
+            <div class="col-md-3">
+                <label for="interfaceName" class="form-label">Name<span class="text-danger">*</span></label>
+                <input type="text" id="interfaceName" class="form-control form-control-sm">
+            </div>
+            <div class="col-md-3">
+                <label for="interfaceDesignation" class="form-label">Designation</label>
+                <input type="text" id="interfaceDesignation" class="form-control form-control-sm">
+            </div>
+            <div class="col-md-3">
+                <label for="interfaceDigital" class="form-label">Digital
+                    Signature
+                    Available</label>
+                <select id="interfaceDigital" class="form-select form-select-sm">
+                    <option>Yes</option>
+                    <option selected>No</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="row g-2 mb-3 justify-content-center">
+            <div class="col-auto text-center">
+                <button type="button" id="interfaceSaveBtn" class="btn btn-primary me-2">Save</button>
+                <button type="button" id="interfaceClearBtn" class="btn btn-secondary me-2">Clear</button>
+                <button type="button" id="interfaceDeleteBtn" class="btn btn-danger ">Delete</button>
+            </div>
+        </div>
+    </fieldset>
+</section>
+<!-- <p>person-auth-details works!</p> -->

@@ -1,0 +1,66 @@
+<section>
+    <!-- (6) Composition Scheme -->
+    <div class="mb-3 d-flex justify-content-between align-items-center">
+        <label for="composition" class="form-label mb-0" style="width: 50%;">
+            (6) Whether opting for Composition Scheme <span class="text-danger">*</span>
+        </label>
+        <select id="composition" class="form-select form-select-sm ms-2" style="width: 50%;" required>
+            <option disabled selected value="">No - Exclusively Ad Valorem tax
+                payment
+            </option>
+        </select>
+    </div>
+    <!-- (9) Incurring liability -->
+    <div class="mb-3 d-flex justify-content-between align-items-center">
+        <label for="incrring" class="form-label mb-0" style="width: 50%;">
+            (9) Basis of incurring liability to pay tax <span class="text-danger">*</span>
+        </label>
+        <select id="incurring" class="form-select form-select-sm ms-2" style="width: 50%;" required>
+            <option disabled selected value="">Select</option>
+            <option>Brick-Kiln</option>
+            <option>Export of goods out of the state</option>
+            <option>Import of the goods into the territory of India</option>
+            <option>Liquor Licensee under the Punjab Excise Act, 1914</option>
+            <option>Minerals</option>
+            <option>Purchases in course of inter-state trade or commerce
+            </option>
+            <option>Sales exceeding Rs. 5,00,000/- (Five Lakhs)</option>
+            <option>Sales in course of export out of the territory of India
+            </option>
+            <option>Sales in course of inter-state trade or commerce</option>
+            <option>Voluntary Registration</option>
+        </select>
+    </div>
+
+    <!-- (10) Registration under Central Sales Tax Act -->
+    <div class="mb-3 d-flex justify-content-between align-items-center">
+        <label for="registrationCentralSales" class="form-label mb-0" style="width: 50%;">
+            (10) Whether Registration under the Central Sales Tax Act, 1956 is
+            required
+            <span class="text-danger">*</span>
+        </label>
+        <select id="registrationCentralSales" class="form-select form-select-sm ms-2" style="width: 50%;" required>
+            <option disabled selected value="">Select</option>
+            <option>Yes</option>
+            <option>No</option>
+        </select>
+    </div>
+    <!-- (12) Date of Liability/Threshold reached -->
+    <div class="mb-3 d-flex justify-content-between align-items-center">
+        <label for="liabilityDate" class="form-label mb-0" style="width: 50%;">
+            (12) Date of Liability/Threshold reached <span class="text-danger">*</span>
+        </label>
+        <input type="date" id="liabilityDate" class="form-control form-control-sm ms-2" style="width: 50%;" required />
+    </div>
+    <!-- (13) Expected turnover of the Business -->
+    <div class="mb-3 d-flex justify-content-between align-items-center">
+        <label for="expectedTurnover" class="form-label mb-0" style="width: 50%;">
+            (13) Expected turnover of the Business in the next 12 months <span class="text-danger">*</span>
+        </label>
+        <div class="input-group input-group-sm ms-2" style="width: 50%;">
+            <span class="input-group-text">₹</span>
+            <input type="number" id="expectedTurnover" class="form-control" placeholder="0.00" required />
+        </div>
+    </div>
+</section>
+<!-- <p>liability-tax-details works!</p> -->

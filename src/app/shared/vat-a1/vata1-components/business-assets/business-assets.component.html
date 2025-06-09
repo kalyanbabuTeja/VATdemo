@@ -1,0 +1,86 @@
+<section>
+    <!-- (21) Details of Immovable Properties Owned Wholly or Partly by the Business -->
+    <fieldset class="border p-3 mb-4">
+        <legend class="w-auto px-2">(21) Details of Immovable Properties Owned
+            Wholly or
+            Partly
+            by the Business</legend>
+
+        <div class="form-check form-check-inline mb-2">
+            <input class="form-check-input" type="radio" name="propertyOwnership" id="propertyYes" checked>
+            <label class="form-check-label" for="propertyYes">Following are the
+                details of
+                immovable properties owned by Business</label>
+        </div>
+        <div class="form-check form-check-inline mb-2">
+            <input class="form-check-input" type="radio" name="propertyOwnership" id="propertyNo">
+            <label class="form-check-label" for="propertyNo">No property Owned
+                by
+                the
+                business</label>
+        </div>
+
+        <div class="table-responsive mb-3">
+            <table class="table table-bordered table-sm" id="propertyDetailsTable">
+                <thead class="table-light">
+                    <tr>
+                        <th>Select</th>
+                        <th>View / Edit</th>
+                        <th>Sr. No.</th>
+                        <th>Description of Property</th>
+                        <th>₹ Approximate Value</th>
+                        <th>Share Percentage</th>
+                        <th>Address</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+
+        <!-- New Property Entry -->
+        <div class="row mb-2">
+            <div class="col-md-3">
+                <label for="propertyDescription" class="form-label">Description
+                    of
+                    Property<span class="text-danger">*</span></label>
+            </div>
+            <div class="col-md-3">
+                <input type="text" id="propertyDescription" class="form-control form-control-sm">
+            </div>
+            <div class="col-md-3">
+                <label for="propertyValue" class="form-label">Approximate
+                    Value<span class="text-danger">*</span></label>
+            </div>
+            <div class="col-md-3">
+                <input type="number" id="propertyValue" class="form-control form-control-sm">
+            </div>
+        </div>
+
+        <div class="row mb-2">
+            <div class="col-md-3">
+                <label for="propertyShare" class="form-label">Share
+                    Percentage<span class="text-danger">*</span></label>
+            </div>
+            <div class="col-md-3">
+                <input type="number" id="propertyShare" class="form-control form-control-sm">
+            </div>
+            <div class="col-md-3">
+                <label for="propertyAddress" class="form-label">Address where
+                    Property is
+                    Situated<span class="text-danger">*</span></label>
+            </div>
+            <div class="col-md-3">
+                <input type="text" id="propertyAddress" class="form-control form-control-sm">
+            </div>
+        </div>
+
+        <div class="row g-2 mb-3 justify-content-center">
+            <div class="col-auto text-center">
+                <button type="button" id="propertySaveBtn" class="btn btn-primary me-2">Save</button>
+                <button type="button" id="propertyClearBtn" class="btn btn-secondary me-2">Clear</button>
+                <button type="button" id="propertyDeleteBtn" class="btn btn-danger ">Delete</button>
+            </div>
+        </div>
+    </fieldset>
+</section>
+<!-- <p>business-assets works!</p> -->

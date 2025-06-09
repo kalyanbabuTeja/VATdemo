@@ -1,0 +1,3010 @@
+<div class="container-fluid">
+	<section>
+		<div class="container-fluid">
+			<!-- Logo Row -->
+			<div class="row py-3 align-items-center">
+				<div class="col-md-4">
+					<img src="/images/logo.png" class="img-fluid" alt="Logo">
+				</div>
+			</div>
+
+			<!-- Tabs Section -->
+			<div class="tabs tabs-style-shape my-4 mb-4">
+				<!-- Tab Header -->
+				<div class="tab-container">
+					<div class="tab" *ngFor="let tab of tabs" [class.active]="tab === activeTab" (click)="selectTab(tab)">
+						<span class="tab-icon">{{ tab.icon }}</span> 
+						<span class="tab-label">{{ tab.label }}</span>
+					</div>
+				</div>
+				<div class="tab-content-wrapper">
+					<ng-container [ngSwitch]="activeTab.label">
+
+						<div *ngSwitchCase="'Instructions'" class="tab-content">
+							<section>
+								<div class="container border p-3" style="padding: 5%;">
+									<div style="text-align: right;">
+										<button class="btn btn-primary mb-3" onclick="window.print()">Print
+											Instructions</button>
+									</div>
+									<h2 style="text-align: center;">Instructions</h2>
+									<ul type="none" style="text-align: left;">
+										<li><strong>Applicants will have to pursue 3 steps for completing the
+												Registration
+												Process:</strong>
+											<ul type="none">
+												<li><strong>Step 1:</strong> XML generation in Offline Utility
+												</li>
+												<li><strong>Step 2:</strong> Tasks to be completed at <a
+														href="https://haryanatax.gov.in"
+														target="_blank">haryanatax.gov.in</a>
+												</li>
+												<li><strong>Step 3:</strong> Tasks to be performed at FCO</li>
+											</ul>
+										</li>
+
+										<li><strong>Step 1: XML generation in Offline Utility</strong>
+											<ol>
+												<li>Applicants are required to fill details in the main form and
+													the
+													related
+													annexures.</li>
+												<li>Every form has a "Validate" button at the bottom. Users must
+													validate
+													each
+													form to confirm all mandatory fields are completed.</li>
+												<li>Wherever multiple items are to be saved, there is a
+													provision of
+													a
+													table.
+													<ul type="none" style="text-align: left;">
+														<li>To populate details in the table, enter values in
+															fields
+															below
+															the
+															table and click on "Save".</li>
+													</ul>
+												</li>
+												<li>"View/Edit" can be clicked to view and edit saved
+													information.
+												</li>
+												<li>"View/Edit" buttons are available next to each Name in
+													Annexure
+													I & V
+													tables. Use these to view and fill respective annexures per
+													applicant/person.</li>
+												<li>To remove a name from Annexure I/V, delete the corresponding
+													entry in
+													the
+													table at serial number 22/23 of Form VAT AT.</li>
+												<li>The form can be filled with or without Digital Signatures.
+												</li>
+												<li>Digital Signatures can be used partially (for some
+													applicants
+													only).
+												</li>
+												<li>Once all annexures and forms are filled, click "Validate and
+													Generate
+													XML"
+													to generate the final XML.</li>
+											</ol>
+										</li>
+
+										<li><strong>Step 2: Tasks to be completed at haryanatax.gov.in</strong>
+											<ol start="10">
+												<li>Applicants are required to:
+													<ol type="a">
+														<li>Create a Temporary User Account</li>
+														<li>Upload the XML</li>
+														<li>Pay Registration Fees under HVAT Act, 2003 & CST
+															Act,
+															1956 at <a href="https://egrashry.nic.in"
+																target="_blank">https://egrashry.nic.in</a></li>
+
+														<ul type="none" style="text-align: left;">
+															<li><strong>STEP 1:</strong><br>
+																The applicants will generate challan from the
+																above
+																site
+																<br>Printout of such challan will be carried by
+																the
+																applicant to
+																the concerned bank/treasury
+																<br>Payment for Registration fee will be
+																accepted
+																the bank
+																before expiry of the challan
+																<br>The bank will issue a CIN and CIN date for
+																payment
+																receipt
+															</li>
+															<li><strong>STEP 2:</strong><br>
+																The applicants will re login into the temporary
+																account
+																<br>The applicants will then update GRN, GRN
+																Date,
+																CIN, CIN
+																date, Bank name
+															</li>
+														</ul>
+														<li>(Optional) Upload Documents</li>
+													</ol>
+												</li>
+											</ol>
+										</li>
+									</ul>
+
+									<ul type="none" style="text-align: left;">
+										<li>
+											<ol start="11">
+												<li>Once all tasks are completed, the applicant will be able to
+													preview the
+													Application
+													Form.
+												<li>Printouts of application forms will be available post
+													submission
+													at <a href="https://www.haryanatax.gov.in"
+														target="_blank">www.haryanatax.gov.in</a>
+												<li>The applicants will be required to submit signed copy of the
+													printout of
+													application
+													forms and mandatory documents within 7 days to the Excise &
+													Taxation
+													Department,
+													Haryana through the Facilitation Centre Operator (FCO) of
+													the
+													concerned
+													district.
+													<br>
+													Please note, in case the printout of the Application forms
+													and/or signed
+													copies
+													of
+													Mandatory documents are not submitted to the FCO within 7
+													days,
+													the form
+													will be
+													automatically scrapped.
+													<br>
+													In such scenario, all information submitted by the applicant
+													will become
+													void
+													including Registration fees paid. The applicant will have to
+													perform all
+													actions
+													again including fresh payment of Registration Fees.
+												<li>In case the XML uploaded and the documents uploaded are
+													endorsed
+													by
+													Digital
+													Signature, then the form will be submitted through temporary
+													login and
+													Application
+													No.
+													<br>
+													Scanned copy of duly signed printout of CST form A is
+													mandatory
+													to be
+													uploaded
+													in
+													this cate which should be endorsed by Digital Signature
+
+											</ol>
+									</ul>
+									<ul type="none" style="text-align: left;">
+										<li><strong>STEP 3: Tasks to be performed at FCO</strong><br>
+											<ol start="15">
+												<li>Duly Signed Printouts of Application Forms (including VAT
+													A1,
+													its
+													Annexures
+													&
+													CST forms A) are required to be submitted to the FCO.
+												<li>All persons mentioned in table appearing at serial number 11
+													of
+													CST Form
+													A
+													are
+													also required to provide their signatures (duty attested by
+													witnesses)
+													on
+													the
+													printout of CST Form A.
+												<li>Applicants/Authorized persons who have not attached digital
+													signatures
+													in
+													the
+													XML are required to provide their signatures on the printout
+													of
+													the
+													Application
+													forms including Annexures.
+												<li>Applicants/Authorized Persons who have not attached digital
+													singatures
+													in
+													the
+													XML are required to provide their singatures on the printout
+													of
+													the
+											</ol>
+										<li><strong>Documents</strong>
+											<ol start="19">
+												<li>The applicants will be required to submit signed copies of
+													doomments to
+													the
+													FCO along with Application Forms.</li>
+												<li>The FCO will upload documents which have not been uploaded
+													by
+													the
+													applicant.
+												</li>
+											</ol>
+										<li><strong>Acknowledgement</strong>
+											<ol start="21">
+												<li>Once the FCO uploads pending documents and verifies that
+													documents
+													submitted
+													are corred He will nur an acknowledgement receipt containing
+													application
+													number</li>
+												<li>The Application for Registration will the considered to be
+													submitted to
+													Excise & Taxation Department, Haryana on the date and time
+													the
+													acknowledgement numbers</li>
+											</ol>
+									</ul>
+								</div>
+							</section>
+						</div>
+
+						<div *ngSwitchCase="'VAT A1'" class="tab-content">
+							<section>
+								<div class="container my-4">
+									<div class="border p-3 mb-3">
+										<h3 class="text-center">VAT & CST Registration</h3>
+										<div class="mb-3">
+											The following information is to be submitted by the
+											Proprietor/Partners/Director(s)/Karte of HUF/Authorized
+											Signatory/Principal Officer managing the business affairs of the
+											Company/Slociety/Association of
+											Persons/Club/Head
+											of the Department or any other officer duly authorized by him in
+											writing, on
+											behalf
+											of the business, for
+											application
+											for grant of a certificate of registration under the Haryana Value
+											Added
+											Tax
+											Act,
+											2003
+										</div>
+									</div>
+
+									<div class="bg-primary text-white p-2 fw-bold mb-3">
+										<h5 class="text-center">FORM VAT - A1</h5>
+										<div class="text-center">
+											[See rule 11(5)]
+											<br>
+											Application for the Grant of Registration under Section 11 of the
+											Haryana Value
+											Added Tax Act, 2003
+										</div>
+									</div>
+
+									<!-- Section 2: District -->
+									<div class="mb-4">
+										<label class="form-label fw-bold">To<br>The Assessing Authority,
+											<br>Excise and Taxation Department, Haryana
+										</label>
+										<div class="row align-items-center mb-3">
+											<div class="col-auto">
+												<label for="district" class="form-label mb-0">
+													(a) District (where registration is sought)
+													<span class="text-danger">*</span>
+												</label>
+											</div>
+											<div class="col-auto">
+												<select class="form-select form-select-sm" id="district" required>
+													<option selected disabled value="">Select</option>
+													<option>Ambala</option>
+													<option>Faridabad</option>
+													<option>Gurgaon</option>
+												</select>
+											</div>
+										</div>
+									</div>
+
+									<!-- Section 3: Details of the Business -->
+									<fieldset class="border p-3 mb-4">
+										<legend class="w-auto px-2 fw-bold">Details of the Business</legend>
+
+										<!-- (1) Name & Style -->
+										<div class="mb-3 d-flex justify-content-between align-items-center">
+											<label for="businessName" class="form-label mb-0" style="width: 50%;">
+												(1) Name & Style of the Business <span class="text-danger">*</span>
+											</label>
+											<input type="text" id="businessName"
+												class="form-control form-control-sm ms-2" style="width: 50%;"
+												required />
+										</div>
+
+										<!-- (2) Constitution -->
+										<div class="mb-3 d-flex justify-content-between align-items-center">
+											<label for="constitution" class="form-label mb-0" style="width: 50%;">
+												(2) Constitution of the Business <span class="text-danger">*</span>
+											</label>
+											<select id="constitution" class="form-select form-select-sm ms-2"
+												style="width: 50%;" required>
+												<option disabled selected value="">Select</option>
+												<option>Private Limited Company</option>
+												<option>Proprietorship</option>
+												<option>Partnership</option>
+											</select>
+										</div>
+
+										<!-- (3) Trade Name -->
+										<div class="mb-3 d-flex justify-content-between align-items-center">
+											<label for="tradeName" class="form-label mb-0" style="width: 50%;">
+												(3) Trade Name of the Business (if different)
+											</label>
+											<input type="text" id="tradeName" class="form-control form-control-sm ms-2"
+												style="width: 50%;" />
+										</div>
+
+										<!-- (4) PAN -->
+										<div class="mb-3 d-flex justify-content-between align-items-center">
+											<label for="pan" class="form-label mb-0" style="width: 50%;">
+												(4) PAN of Business/Proprietor <span class="text-danger">*</span>
+											</label>
+											<input type="text" id="pan" class="form-control form-control-sm ms-2"
+												style="width: 50%;" required maxlength="10" />
+										</div>
+
+										<!-- (5) Nature Of Business -->
+										<div class="mb-3 d-flex justify-content-between align-items-center">
+											<label for="nature" class="form-label mb-0" style="width: 50%;">
+												(5) Nature of Business <span class="text-danger">*</span>
+											</label>
+											<select id="nature" class="form-select form-select-sm ms-2"
+												style="width: 50%;" required>
+												<option disabled selected value="">Select</option>
+												<option>Trading</option>
+												<option>Manufacturing</option>
+												<option>Service</option>
+											</select>
+										</div>
+
+										<!-- Nature of Business Section -->
+										<br>
+										<legend class="w-auto px-2 fw-bold">Nature of Business <span
+												class="text-danger">*</span></legend>
+										<table class="table table-bordered" id="businessTable">
+											<thead class="table-light">
+												<tr>
+													<th>Select</th>
+													<th>Sr. No.</th>
+													<th>Name</th>
+													<th>Constitution</th>
+													<th>Trade Name</th>
+													<th>PAN</th>
+													<th>Nature</th>
+												</tr>
+											</thead>
+											<tbody></tbody>
+										</table>
+										<!-- </fieldset> -->
+
+										<div class="row g-2 mb-3 justify-content-center">
+											<div class="col-auto text-center">
+												<button class="btn btn-primary me-2" type="button"
+													id="saveBtn">Save</button>
+												<button class="btn btn-secondary me-2" type="button"
+													id="clearBtn">Clear</button>
+												<button class="btn btn-danger" type="button"
+													id="deleteBtn">Delete</button>
+											</div>
+										</div>
+									</fieldset>
+									<!-- (6) Composition Scheme -->
+									<div class="mb-3 d-flex justify-content-between align-items-center">
+										<label for="composition" class="form-label mb-0" style="width: 50%;">
+											(6) Whether opting for Composition Scheme <span class="text-danger">*</span>
+										</label>
+										<select id="composition" class="form-select form-select-sm ms-2"
+											style="width: 50%;" required>
+											<option disabled selected value="">No - Exclusively Ad Valorem tax
+												payment
+											</option>
+										</select>
+									</div>
+									<!-- (7) Commodities -->
+									<div class="mb-3 d-flex justify-content-between align-items-center">
+										<label class="form-label mb-0" style="width: 30%;">
+											(7) Four Principal Commodities which the Business deals in <span
+												class="text-danger">*</span>
+										</label>
+
+										<div class="d-flex justify-content-between" style="width: 70%; gap: 0.5rem;">
+											<select class="form-select form-select-sm commodity-select" id="commodity1"
+												required></select>
+											<select class="form-select form-select-sm commodity-select" id="commodity2"
+												required></select>
+											<select class="form-select form-select-sm commodity-select" id="commodity3"
+												required></select>
+											<select class="form-select form-select-sm commodity-select" id="commodity4"
+												required></select>
+										</div>
+									</div>
+
+									<!-- (8) EAC (Economic Activity Code) -->
+									<fieldset class="border p-3 mb-4">
+										<legend class="w-auto px-2">8. Economic Activity Code</legend>
+										<!-- EAC Code: Label and Input in the same line -->
+										<div class="row mb-3 align-items-center">
+											<div class="col-md-2">
+												<label for="eacCode" class="form-label mb-0">EAC Code</label>
+											</div>
+											<div class="col-md-4">
+												<input type="text" id="eacCode" class="form-control form-control-sm"
+													value="20201" readonly />
+											</div>
+										</div>
+
+										<!-- Principal Economic Activity & Code -->
+										<div class="row mb-3 align-items-center">
+											<div class="col-md-3">
+												<label for="businessNature" class="form-label mb-0">Principal
+													Economic
+													Activity/Nature of Business <span
+														class="text-danger">*</span></label>
+											</div>
+											<div class="col-md-3">
+												<select id="businessNature" class="form-select form-select-sm" required>
+													<option disabled selected value="">Select</option>
+													<option value="2">Trading</option>
+													<option value="3">Manufacturing</option>
+												</select>
+											</div>
+
+											<div class="col-md-3">
+												<label for="code" class="form-label mb-0">Code</label>
+											</div>
+											<div class="col-md-3">
+												<input type="text" id="code" class="form-control form-control-sm"
+													value="2" readonly />
+											</div>
+										</div>
+
+										<!-- Type of Industry Description & Type of Industry Code -->
+										<div class="row mb-3 align-items-center">
+											<div class="col-md-3">
+												<label for="industryType" class="form-label mb-0">Type of
+													Industry
+													Description
+													<span class="text-danger">*</span></label>
+											</div>
+											<div class="col-md-3">
+												<select id="industryType" class="form-select form-select-sm" required>
+													<option disabled selected value="">Select</option>
+													<option value="01">Work Contracts</option>
+													<option value="02">Leasing</option>
+													<option value="03">Traders</option>
+												</select>
+											</div>
+
+											<div class="col-md-3">
+												<label for="industryCode" class="form-label mb-0">Type of
+													Industry
+													Code</label>
+											</div>
+											<div class="col-md-3">
+												<input type="text" id="industryCode"
+													class="form-control form-control-sm" value="02" readonly />
+											</div>
+										</div>
+
+										<!-- Product Description & Product Code -->
+										<div class="row align-items-center">
+											<div class="col-md-3">
+												<label for="productDescription" class="form-label mb-0">Product
+													Description
+													<span class="text-danger">*</span></label>
+											</div>
+											<div class="col-md-3">
+												<select id="productDescription" class="form-select form-select-sm"
+													required>
+													<option disabled selected value="">Select</option>
+													<option value="01">Contracts relating to site work</option>
+													<option value="02">Custom Construction</option>
+													<option value="03">Any other works contracts</option>
+												</select>
+											</div>
+
+											<div class="col-md-3">
+												<label for="productCode" class="form-label mb-0">Product
+													Code</label>
+											</div>
+											<div class="col-md-3">
+												<input type="text" id="productCode" class="form-control form-control-sm"
+													value="01" readonly />
+											</div>
+										</div>
+									</fieldset>
+
+									<!-- (9) Incurring liability -->
+									<div class="mb-3 d-flex justify-content-between align-items-center">
+										<label for="incrring" class="form-label mb-0" style="width: 50%;">
+											(9) Basis of incurring liability to pay tax <span
+												class="text-danger">*</span>
+										</label>
+										<select id="incurring" class="form-select form-select-sm ms-2"
+											style="width: 50%;" required>
+											<option disabled selected value="">Select</option>
+											<option>Brick-Kiln</option>
+											<option>Export of goods out of the state</option>
+											<option>Import of the goods into the territory of India</option>
+											<option>Liquor Licensee under the Punjab Excise Act, 1914</option>
+											<option>Minerals</option>
+											<option>Purchases in course of inter-state trade or commerce
+											</option>
+											<option>Sales exceeding Rs. 5,00,000/- (Five Lakhs)</option>
+											<option>Sales in course of export out of the territory of India
+											</option>
+											<option>Sales in course of inter-state trade or commerce</option>
+											<option>Voluntary Registration</option>
+										</select>
+									</div>
+
+									<!-- (10) Registration under Central Sales Tax Act -->
+									<div class="mb-3 d-flex justify-content-between align-items-center">
+										<label for="registrationCentralSales" class="form-label mb-0"
+											style="width: 50%;">
+											(10) Whether Registration under the Central Sales Tax Act, 1956 is
+											required
+											<span class="text-danger">*</span>
+										</label>
+										<select id="registrationCentralSales" class="form-select form-select-sm ms-2"
+											style="width: 50%;" required>
+											<option disabled selected value="">Select</option>
+											<option>Yes</option>
+											<option>No</option>
+										</select>
+									</div>
+									<!-- (11) Date of commencement of Business -->
+									<div class="mb-3 d-flex justify-content-between align-items-center">
+										<label for="commencementDate" class="form-label mb-0" style="width: 50%;">
+											(11) Date of commencement of Business in the State <span
+												class="text-danger">*</span>
+										</label>
+										<input type="date" id="commencementDate"
+											class="form-control form-control-sm ms-2" style="width: 50%;" required />
+									</div>
+
+									<!-- (12) Date of Liability/Threshold reached -->
+									<div class="mb-3 d-flex justify-content-between align-items-center">
+										<label for="liabilityDate" class="form-label mb-0" style="width: 50%;">
+											(12) Date of Liability/Threshold reached <span class="text-danger">*</span>
+										</label>
+										<input type="date" id="liabilityDate" class="form-control form-control-sm ms-2"
+											style="width: 50%;" required />
+									</div>
+
+									<!-- (13) Expected turnover of the Business -->
+									<div class="mb-3 d-flex justify-content-between align-items-center">
+										<label for="expectedTurnover" class="form-label mb-0" style="width: 50%;">
+											(13) Expected turnover of the Business in the next 12 months <span
+												class="text-danger">*</span>
+										</label>
+										<div class="input-group input-group-sm ms-2" style="width: 50%;">
+											<span class="input-group-text">₹</span>
+											<input type="number" id="expectedTurnover" class="form-control"
+												placeholder="0.00" required />
+										</div>
+									</div>
+
+									<!-- (14) License/permit required for commencement -->
+									<div class="mb-3">
+										<div class="d-flex justify-content-between align-items-center">
+											<label for="licenseRequired" class="form-label mb-0" style="width: 50%;">
+												(14) Whether any license/permit required for the commencement of
+												Business is
+												to
+												be submitted along with
+												this application <span class="text-danger">*</span>
+											</label>
+											<select id="licenseRequired" class="form-select form-select-sm ms-2"
+												style="width: 50%;" required onchange="toggleLicenseInput()">
+												<option disabled selected value="">Select</option>
+												<option value="Yes">Yes</option>
+												<option value="No">No</option>
+											</select>
+										</div>
+
+										<!-- Hidden input that appears only when 'Yes' is selected -->
+										<div id="licenseInputContainer" class="mt-2 d-none">
+											<input type="text" id="licRequiredYes" class="form-control form-control-sm"
+												placeholder="Enter license/permit details" />
+										</div>
+									</div>
+
+
+									<!-- (15) Script in which books of accounts maintained -->
+									<div class="mb-3 d-flex justify-content-between align-items-center">
+										<label for="booksScript" class="form-label mb-0" style="width: 50%;">
+											(15) Script in which books of accounts are maintained <span
+												class="text-danger">*</span>
+										</label>
+										<select id="booksScript" class="form-select form-select-sm ms-2"
+											style="width: 50%;" required>
+											<option disabled selected value="">Select</option>
+											<option>Devnagari</option>
+											<option>English</option>
+											<option>Gurmukhi</option>
+											<option>Landa</option>
+										</select>
+									</div>
+
+									<!-- (16) Business maintains its books of accounts as -->
+									<div class="mb-3 d-flex justify-content-between align-items-center">
+										<label for="booksMaintainedAs" class="form-label mb-0" style="width: 50%;">
+											(16) The Business maintains its books of accounts as <span
+												class="text-danger">*</span>
+										</label>
+										<select id="booksMaintainedAs" class="form-select form-select-sm ms-2"
+											style="width: 50%;" required>
+											<option disabled selected value="">Select</option>
+											<option>Computerized</option>
+											<option>Manual</option>
+										</select>
+									</div>
+
+									<!-- (17) Sale invoices are issued -->
+									<div class="mb-3 d-flex justify-content-between align-items-center">
+										<label for="saleInvoicesIssued" class="form-label mb-0" style="width: 50%;">
+											(17) Sale invoices are issued <span class="text-danger">*</span>
+										</label>
+										<select id="saleInvoicesIssued" class="form-select form-select-sm ms-2"
+											style="width: 50%;" required>
+											<option disabled selected value="">Select</option>
+											<option>System generated</option>
+											<option>Manually</option>
+										</select>
+									</div>
+
+									<!-- (18) Address of the Principal Place of Business in Haryana -->
+									<fieldset class="border p-3 mb-4">
+										<legend class="w-auto px-2">(18) Address of the Principal Place of
+											Business
+											in
+											Haryana
+										</legend>
+
+										<div class="row mb-2">
+											<div class="col-md-3">
+												<label for="ownershipType" class="form-label">Whether
+													Owned/Rented/Leased<span class="text-danger">*</span></label>
+											</div>
+											<div class="col-md-3">
+												<select id="ownershipType" class="form-select form-select-sm" required>
+													<option disabled selected value="">Select</option>
+													<option>Owned</option>
+													<option>Rented</option>
+													<option>Leased</option>
+												</select>
+											</div>
+											<div class="col-md-3">
+												<label for="invoiceIssued" class="form-label">Whether Invoices
+													are
+													issued<span class="text-danger">*</span></label>
+											</div>
+											<div class="col-md-3">
+												<select id="invoiceIssued" class="form-select form-select-sm" required>
+													<option disabled selected value="">Select</option>
+													<option>Yes</option>
+													<option>No</option>
+												</select>
+											</div>
+										</div>
+
+										<div class="row mb-2">
+											<div class="col-md-3">
+												<label for="buildingNo" class="form-label">SCO/Booth/Flat/Floor/Door
+													No.<span class="text-danger">*</span></label>
+											</div>
+											<div class="col-md-3">
+												<input type="text" id="buildingNo" class="form-control form-control-sm"
+													required>
+											</div>
+											<div class="col-md-3">
+												<label for="streetName" class="form-label">Street/Market
+													Place<span class="text-danger">*</span></label>
+											</div>
+											<div class="col-md-3">
+												<input type="text" id="streetName" class="form-control form-control-sm"
+													required>
+											</div>
+										</div>
+
+										<div class="row mb-2">
+											<div class="col-md-3">
+												<label for="sectorArea" class="form-label">Sector/Area</label>
+											</div>
+											<div class="col-md-3">
+												<input type="text" id="sectorArea" class="form-control form-control-sm"
+													required>
+											</div>
+											<div class="col-md-3">
+												<label for="cityName" class="form-label">City/Town/Village<span
+														class="text-danger">*</span></label>
+											</div>
+											<div class="col-md-3">
+												<input type="text" id="cityName" class="form-control form-control-sm"
+													required>
+											</div>
+										</div>
+
+										<div class="row mb-2">
+											<div class="col-md-3">
+												<label for="postOffice" class="form-label">Post Office</label>
+											</div>
+											<div class="col-md-3">
+												<input type="text" id="postOffice" class="form-control form-control-sm">
+											</div>
+											<div class="col-md-3">
+												<label for="district" class="form-label">District<span
+														class="text-danger">*</span></label>
+											</div>
+											<div class="col-md-3">
+												<select id="district" class="form-select form-select-sm" required>
+													<option disabled selected value="">Select</option>
+													<option selected>Ambala</option>
+													<option>Faridabad</option>
+
+													<!-- Add more districts as needed -->
+												</select>
+											</div>
+										</div>
+
+										<div class="row mb-2">
+											<div class="col-md-3">
+												<label for="pinCode" class="form-label">Pin Code<span
+														class="text-danger">*</span></label>
+											</div>
+											<div class="col-md-3">
+												<input type="text" id="pinCode" class="form-control form-control-sm"
+													required>
+											</div>
+											<div class="col-md-3">
+												<label for="state" class="form-label">State</label>
+											</div>
+											<div class="col-md-3">
+												<input type="text" id="state" class="form-control form-control-sm"
+													value="Haryana" readonly>
+											</div>
+										</div>
+
+										<div class="row">
+											<div class="col-md-3">
+												<label for="country" class="form-label">Country<span
+														class="text-danger">*</span></label>
+											</div>
+											<div class="col-md-3">
+												<input type="text" id="country" class="form-control form-control-sm"
+													value="India" readonly>
+											</div>
+										</div>
+									</fieldset>
+
+									<!-- (19) Contact Details of the Business -->
+									<fieldset class="border p-3 mb-4">
+										<legend class="w-auto px-2">(19) Contact Details of the Business
+										</legend>
+
+										<div class="row mb-2">
+											<div class="col-md-3">
+												<label for="telephone1" class="form-label">Telephone No.
+													(1)</label>
+											</div>
+											<div class="col-md-3">
+												<input type="tel" id="telephone1" class="form-control form-control-sm"
+													placeholder="+91">
+											</div>
+											<div class="col-md-3">
+												<label for="telephone2" class="form-label">Telephone No.
+													(2)</label>
+											</div>
+											<div class="col-md-3">
+												<input type="tel" id="telephone2" class="form-control form-control-sm"
+													placeholder="+91">
+											</div>
+										</div>
+
+										<div class="row mb-2">
+											<div class="col-md-3">
+												<label for="faxNo" class="form-label">FAX No.</label>
+											</div>
+											<div class="col-md-3">
+												<input type="tel" id="faxNo" class="form-control form-control-sm"
+													placeholder="+91">
+											</div>
+											<div class="col-md-3">
+												<label for="mobileNo" class="form-label">Mobile No.<span
+														class="text-danger">*</span></label>
+											</div>
+											<div class="col-md-3">
+												<input type="tel" id="mobileNo" class="form-control form-control-sm"
+													required>
+											</div>
+										</div>
+
+										<div class="row">
+											<div class="col-md-3">
+												<label for="emailId" class="form-label">Email Id<span
+														class="text-danger">*</span></label>
+											</div>
+											<div class="col-md-3">
+												<input type="email" id="emailId" class="form-control form-control-sm"
+													required>
+											</div>
+										</div>
+									</fieldset>
+
+									<!-- (20) Details of Bank Accounts of the Business -->
+									<fieldset class="border p-3 mb-4">
+										<legend class="w-auto px-2">(20) Details of Bank Accounts of the
+											Business
+										</legend>
+
+
+
+										<!-- New Bank Account Entry -->
+										<div class="row mb-2">
+											<div class="col-md-3">
+												<label for="bankName" class="form-label">Bank Name<span
+														class="text-danger">*</span></label>
+											</div>
+											<div class="col-md-3">
+												<select id="bankName" class="form-select form-select-sm" required>
+													<option disabled selected value="">Select</option>
+													<option value="sbi">STATE BANK OF INDIA</option>
+													<option value="hdfc">HDFC BANK</option>
+													<option>ABHYUDAYA COP BANK</option>
+													<option>ABN AMRO BANK</option>
+													<!-- Add more as needed -->
+												</select>
+											</div>
+											<div class="col-md-3">
+												<label for="accountType" class="form-label">Type of Account<span
+														class="text-danger">*</span></label>
+											</div>
+											<div class="col-md-3">
+												<select id="accountType" class="form-select form-select-sm" required>
+													<option disabled selected value="">Select</option>
+													<option>Current Account</option>
+													<option>Savings Account</option>
+												</select>
+											</div>
+										</div>
+
+										<div class="row mb-2">
+											<div class="col-md-3">
+												<label for="accountNumber" class="form-label">Account
+													Number<span class="text-danger">*</span></label>
+											</div>
+											<div class="col-md-3">
+												<input type="text" id="accountNumber"
+													class="form-control form-control-sm" required>
+											</div>
+											<div class="col-md-3">
+												<label for="ifscCode" class="form-label">IFSC Code<span
+														class="text-danger">*</span></label>
+											</div>
+											<div class="col-md-3">
+												<input type="text" id="ifscCode" class="form-control form-control-sm"
+													required>
+											</div>
+										</div>
+
+										<div class="row">
+											<div class="col-md-3">
+												<label for="branchAddress" class="form-label">Branch Name &
+													Address<span class="text-danger">*</span></label>
+											</div>
+											<div class="col-md-9">
+												<input type="text" id="branchAddress"
+													class="form-control form-control-sm" required>
+											</div>
+										</div>
+										<br>
+
+										<div class="table-responsive mb-3">
+											<table class="table table-bordered table-sm" id="bankDetailsTable">
+												<thead class="table-light">
+													<tr>
+														<th>Select</th>
+														<th>View / Edit</th>
+														<th>Sr. No.</th>
+														<th>Bank Name</th>
+														<th>Branch Name & Address</th>
+														<th>Type of Account</th>
+														<th>Account Number</th>
+														<th>IFSC Code</th>
+													</tr>
+												</thead>
+												<tbody>
+												</tbody>
+											</table>
+										</div>
+
+										<div class="row g-2 mb-3 justify-content-center">
+											<div class="col-auto text-center">
+												<button class="btn btn-primary me-2" type="button"
+													id="saveBankBtn">Save</button>
+												<button class="btn btn-secondary me-2" type="button"
+													id="clearBankBtn">Clear</button>
+												<button class="btn btn-danger" type="button"
+													id="deleteBankBtn">Delete</button>
+											</div>
+										</div>
+									</fieldset>
+
+									<!-- (21) Details of Immovable Properties Owned Wholly or Partly by the Business -->
+									<fieldset class="border p-3 mb-4">
+										<legend class="w-auto px-2">(21) Details of Immovable Properties Owned
+											Wholly or
+											Partly
+											by the Business</legend>
+
+										<div class="form-check form-check-inline mb-2">
+											<input class="form-check-input" type="radio" name="propertyOwnership"
+												id="propertyYes" checked>
+											<label class="form-check-label" for="propertyYes">Following are the
+												details of
+												immovable properties owned by Business</label>
+										</div>
+										<div class="form-check form-check-inline mb-2">
+											<input class="form-check-input" type="radio" name="propertyOwnership"
+												id="propertyNo">
+											<label class="form-check-label" for="propertyNo">No property Owned
+												by
+												the
+												business</label>
+										</div>
+
+										<div class="table-responsive mb-3">
+											<table class="table table-bordered table-sm" id="propertyDetailsTable">
+												<thead class="table-light">
+													<tr>
+														<th>Select</th>
+														<th>View / Edit</th>
+														<th>Sr. No.</th>
+														<th>Description of Property</th>
+														<th>₹ Approximate Value</th>
+														<th>Share Percentage</th>
+														<th>Address</th>
+													</tr>
+												</thead>
+												<tbody></tbody>
+											</table>
+										</div>
+
+										<!-- New Property Entry -->
+										<div class="row mb-2">
+											<div class="col-md-3">
+												<label for="propertyDescription" class="form-label">Description
+													of
+													Property<span class="text-danger">*</span></label>
+											</div>
+											<div class="col-md-3">
+												<input type="text" id="propertyDescription"
+													class="form-control form-control-sm">
+											</div>
+											<div class="col-md-3">
+												<label for="propertyValue" class="form-label">Approximate
+													Value<span class="text-danger">*</span></label>
+											</div>
+											<div class="col-md-3">
+												<input type="number" id="propertyValue"
+													class="form-control form-control-sm">
+											</div>
+										</div>
+
+										<div class="row mb-2">
+											<div class="col-md-3">
+												<label for="propertyShare" class="form-label">Share
+													Percentage<span class="text-danger">*</span></label>
+											</div>
+											<div class="col-md-3">
+												<input type="number" id="propertyShare"
+													class="form-control form-control-sm">
+											</div>
+											<div class="col-md-3">
+												<label for="propertyAddress" class="form-label">Address where
+													Property is
+													Situated<span class="text-danger">*</span></label>
+											</div>
+											<div class="col-md-3">
+												<input type="text" id="propertyAddress"
+													class="form-control form-control-sm">
+											</div>
+										</div>
+
+										<div class="row g-2 mb-3 justify-content-center">
+											<div class="col-auto text-center">
+												<button type="button" id="propertySaveBtn"
+													class="btn btn-primary me-2">Save</button>
+												<button type="button" id="propertyClearBtn"
+													class="btn btn-secondary me-2">Clear</button>
+												<button type="button" id="propertyDeleteBtn"
+													class="btn btn-danger ">Delete</button>
+											</div>
+										</div>
+									</fieldset>
+
+									<!-- (22) Details of All Applicants -->
+									<fieldset class="border p-3 mb-4">
+										<legend class="w-auto px-2">(22) Details of all Applicants</legend>
+
+										<div class="table-responsive mb-3">
+											<table class="table table-bordered table-sm" id="applicantDetailsTable">
+												<thead class="table-light">
+													<tr>
+														<th>View / Edit</th>
+														<th>Sr. No.</th>
+														<th>Mr./Ms./M/s</th>
+														<th>Name of the Applicant / Authorized Signatory</th>
+														<th>Status</th>
+														<th>Authorized to Apply on Behalf</th>
+														<th>Digital Signature Available</th>
+													</tr>
+												</thead>
+												<tbody></tbody>
+											</table>
+										</div>
+
+										<!-- New Applicant Entry -->
+										<div class="row mb-2">
+											<div class="col-md-3">
+												<label for="applicantTitle" class="form-label">Mr./Ms./M/s<span
+														class="text-danger">*</span></label>
+												<select id="applicantTitle" class="form-select form-select-sm">
+													<option disabled selected value="">Select</option>
+													<option>Mr.</option>
+													<option>Ms.</option>
+													<option>M/s</option>
+												</select>
+											</div>
+											<div class="col-md-3">
+												<label for="applicantName" class="form-label">Name of the
+													Applicant
+													/
+													Authorized
+													Signatory<span class="text-danger">*</span></label>
+												<input type="text" id="applicantName"
+													class="form-control form-control-sm">
+											</div>
+											<div class="col-md-3">
+												<label for="applicantStatus" class="form-label">Status<span
+														class="text-danger">*</span></label>
+												<select id="applicantStatus" class="form-select form-select-sm">
+													<option disabled selected value="">Select</option>
+													<option>CEO</option>
+													<option>Director</option>
+													<option>Partner</option>
+													<!-- add more as needed -->
+												</select>
+											</div>
+											<div class="col-md-3">
+												<label class="form-label">Digital Signature Available?<span
+														class="text-danger">*</span></label>
+												<select id="applicantDigital" class="form-select form-select-sm">
+													<option disabled selected value="">Select</option>
+													<option>Yes</option>
+													<option>No</option>
+												</select>
+											</div>
+										</div>
+
+										<div class="row g-2 mb-3 justify-content-center">
+											<div class="col-auto text-center">
+												<button type="button" id="applicantSaveBtn"
+													class="btn btn-primary me-2">Save</button>
+												<button type="button" id="applicantClearBtn"
+													class="btn btn-secondary me-2">Clear</button>
+												<button type="button" id="applicantDeleteBtn"
+													class="btn btn-danger me-2">Delete</button>
+											</div>
+										</div>
+									</fieldset>
+
+									<!-- (23) Details of Persons Authorized for Interface with the Department -->
+									<fieldset class="border p-3 mb-4">
+										<legend class="w-auto px-2">(23) Details of Persons Authorized for
+											Interface
+											with
+											the
+											Department</legend>
+
+										<div class="table-responsive mb-3">
+											<table class="table table-bordered table-sm" id="interfaceDetailsTable">
+												<thead class="table-light">
+													<tr>
+														<th>Select</th>
+														<th>View / Edit</th>
+														<th>Sr. No.</th>
+														<th>Mr./Ms.</th>
+														<th>Name</th>
+														<th>Designation</th>
+														<th>Digital Signature Available</th>
+													</tr>
+												</thead>
+												<tbody></tbody>
+											</table>
+										</div>
+
+										<!-- New Interface Entry -->
+										<div class="row mb-2">
+											<div class="col-md-3">
+												<label for="interfaceTitle" class="form-label">Mr./Ms.<span
+														class="text-danger">*</span></label>
+												<select id="interfaceTitle" class="form-select form-select-sm">
+													<option disabled selected value="">Select</option>
+													<option>Mr.</option>
+													<option>Ms.</option>
+												</select>
+											</div>
+											<div class="col-md-3">
+												<label for="interfaceName" class="form-label">Name<span
+														class="text-danger">*</span></label>
+												<input type="text" id="interfaceName"
+													class="form-control form-control-sm">
+											</div>
+											<div class="col-md-3">
+												<label for="interfaceDesignation" class="form-label">Designation</label>
+												<input type="text" id="interfaceDesignation"
+													class="form-control form-control-sm">
+											</div>
+											<div class="col-md-3">
+												<label for="interfaceDigital" class="form-label">Digital
+													Signature
+													Available</label>
+												<select id="interfaceDigital" class="form-select form-select-sm">
+													<option>Yes</option>
+													<option selected>No</option>
+												</select>
+											</div>
+										</div>
+
+										<div class="row g-2 mb-3 justify-content-center">
+											<div class="col-auto text-center">
+												<button type="button" id="interfaceSaveBtn"
+													class="btn btn-primary me-2">Save</button>
+												<button type="button" id="interfaceClearBtn"
+													class="btn btn-secondary me-2">Clear</button>
+												<button type="button" id="interfaceDeleteBtn"
+													class="btn btn-danger ">Delete</button>
+											</div>
+										</div>
+									</fieldset>
+
+
+
+
+
+								</div>
+							</section>
+						</div>
+
+						<div *ngSwitchCase="'Annexure I'" class="tab-content">
+							<section>
+								<div class="border p-3"
+									style="background-color: #f5faff; border-radius: 8px; width: 100%;">
+
+									<h5 class="text-center fw-bold mb-2">List of all applicants as per the table
+										at
+										serial
+										number 22 of form VAT A1</h5>
+									<div class="text-center text-primary mb-2">(Please fill separate Annexure I
+										for
+										every
+										applicant)</div>
+
+									<div class="mb-2">
+										<input type="text" class="form-control form-control-sm mb-1" readonly
+											value="- Click on the 'View/Edit' button below as appearing beside each Name to view and fill respective Annexure I for that Applicant">
+										<input type="text" class="form-control form-control-sm" readonly
+											value="- To remove any name in the list below, please delete the corresponding entry in the table at serial number 22 of Form VAT A1">
+									</div>
+
+									<div class="table-responsive mb-3">
+										<table class="table table-bordered table-sm text-center align-middle">
+											<thead class="table-primary">
+												<tr>
+													<th>View / Edit</th>
+													<th>Sr. No.</th>
+													<th>Name of the Applicant</th>
+													<th>Status</th>
+													<th>Fathers/ Husband's Name</th>
+													<th>Date of Birth</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>
+														<button class="btn btn-outline-primary">View /
+															Edit</button>
+													</td>
+													<td>1</td>
+													<td>testJ</td>
+													<td>CEO</td>
+													<td></td>
+													<td></td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+
+									<div class="d-flex justify-content-between">
+										<button class="btn btn-primary">
+											<i class="bi bi-arrow-left"></i> Previous
+										</button>
+										<button class="btn btn-primary">
+											Next <i class="bi bi-arrow-right"></i>
+										</button>
+									</div>
+
+								</div>
+
+							</section>
+						</div>
+
+						<div *ngSwitchCase="'Annexure II'" class="tab-content">
+							<section>
+								<div class="border p-3"
+									style="background-color: #f5faff; border-radius: 8px; width: 100%;">
+
+									<h6 class="text-primary">Annexure II</h6>
+									<h5 class="text-center fw-bold">Details of additional places of Business
+									</h5>
+
+									<div class="form-check mb-3">
+										<input class="form-check-input" type="checkbox" id="annexureNotApplicable">
+										<label class="form-check-label" for="annexureNotApplicable">
+											Tick if Annexure Not Applicable
+										</label>
+									</div>
+
+									<!-- Section 1 -->
+									<fieldset class="border p-3 mb-4">
+										<legend class="w-auto px-2 fw-bold">(1) Details of additional places of
+											Business in
+											the
+											State of Haryana</legend>
+
+										<div class="table-responsive mb-3">
+											<table class="table table-bordered table-sm text-center align-middle">
+												<thead class="table-primary">
+													<tr>
+														<th>Select</th>
+														<th>View / Edit</th>
+														<th>Sr. No.</th>
+														<th>Type of Business Place</th>
+														<th>Whether Owned/ Rented/ Leased</th>
+														<th>Whether Invoices are issued from this premise</th>
+														<th>Address</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td colspan="7">To populate details in this section,
+															please
+															enter
+															values
+															in the field(s) below and click on "Save"</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+
+										<div class="row mb-2">
+											<div class="col-md-4">
+												<label class="form-label">Type of Business Place</label>
+												<select class="form-select form-select-sm">
+													<option selected disabled>Select</option>
+													<option>Warehouse</option>
+													<option>Branch Office</option>
+													<!-- Add more -->
+												</select>
+											</div>
+											<div class="col-md-4">
+												<label class="form-label">Whether Owned/Rented/Leased</label>
+												<select class="form-select form-select-sm">
+													<option selected disabled>Select</option>
+													<option>Owned</option>
+													<option>Rented</option>
+													<option>Leased</option>
+												</select>
+											</div>
+											<div class="col-md-4">
+												<label class="form-label">Whether Invoices are issued from this
+													premise</label>
+												<select class="form-select form-select-sm">
+													<option selected disabled>Select</option>
+													<option>Yes</option>
+													<option>No</option>
+												</select>
+											</div>
+										</div>
+
+										<h6 class="bg-primary text-white p-2 rounded">Address</h6>
+										<div class="row g-2">
+											<div class="col-md-3">
+												<input type="text" class="form-control form-control-sm"
+													placeholder="SCO/Booth/Flat No.">
+											</div>
+											<div class="col-md-3">
+												<input type="text" class="form-control form-control-sm"
+													placeholder="Building / Street / Lane">
+											</div>
+											<div class="col-md-3">
+												<input type="text" class="form-control form-control-sm"
+													placeholder="Sector/Area">
+											</div>
+											<div class="col-md-3">
+												<input type="text" class="form-control form-control-sm"
+													placeholder="City/Town/Village">
+											</div>
+											<div class="col-md-3">
+												<input type="text" class="form-control form-control-sm"
+													placeholder="Post Office">
+											</div>
+											<div class="col-md-3">
+												<select class="form-select form-select-sm">
+													<option selected disabled>Select District</option>
+													<option>Gurgaon</option>
+													<option>Faridabad</option>
+												</select>
+											</div>
+											<div class="col-md-3">
+												<select class="form-select form-select-sm">
+													<option selected>Haryana</option>
+												</select>
+											</div>
+											<div class="col-md-3">
+												<input type="text" class="form-control form-control-sm"
+													placeholder="Pin Code">
+											</div>
+											<div class="col-md-3">
+												<input type="text" class="form-control form-control-sm" value="India"
+													readonly>
+											</div>
+											<div class="col-md-3">
+												<input type="text" class="form-control form-control-sm"
+													placeholder="Telephone No.">
+											</div>
+											<div class="col-md-3">
+												<input type="text" class="form-control form-control-sm"
+													placeholder="FAX No.">
+											</div>
+											<div class="col-md-3">
+												<input type="text" class="form-control form-control-sm"
+													placeholder="Mobile No.">
+											</div>
+											<div class="col-md-3">
+												<input type="email" class="form-control form-control-sm"
+													placeholder="Email Address">
+											</div>
+											<div class="col-md-3">
+												<input type="text" class="form-control form-control-sm"
+													placeholder="Ward">
+											</div>
+											<div>
+												<br>
+											</div>
+										</div>
+
+										<div class="row g-2 mb-3 justify-content-center">
+											<div class="col-auto text-center">
+												<button class="btn btn-primary me-2" type="button"
+													id="saveBtn">Save</button>
+												<button class="btn btn-secondary me-2" type="button"
+													id="clearBtn">Clear</button>
+												<button class="btn btn-danger" type="button"
+													id="deleteBtn">Delete</button>
+											</div>
+										</div>
+									</fieldset>
+
+									<!-- Section 2 -->
+									<fieldset class="border p-3 mb-4">
+										<legend class="w-auto px-2 fw-bold">(2) Details of additional places of
+											Business
+											outside
+											the State of Haryana</legend>
+
+										<div class="table-responsive mb-3">
+											<table class="table table-bordered table-sm text-center align-middle">
+												<thead class="table-primary">
+													<tr>
+														<th>Select</th>
+														<th>View / Edit</th>
+														<th>Sr. No.</th>
+														<th>Type of Business Place</th>
+														<th>Whether Owned/ Rented/ Leased</th>
+														<th>Whether Invoices are issued from this premise</th>
+														<th>Address</th>
+														<th>Ward</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td colspan="8">To populate details in this section,
+															please
+															enter
+															values
+															in the field(s) below and click on "Save"</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+
+										<div class="row mb-2">
+											<div class="col-md-4">
+												<label class="form-label">Type of Business Place</label>
+												<select class="form-select form-select-sm">
+													<option>Warehouse</option>
+													<option>Branch Office</option>
+												</select>
+											</div>
+											<div class="col-md-4">
+												<label class="form-label">Whether Owned/Rented/Leased</label>
+												<select class="form-select form-select-sm">
+													<option>Owned</option>
+													<option>Rented</option>
+													<option selected>Leased</option>
+												</select>
+											</div>
+											<div class="col-md-4">
+												<label class="form-label">Whether Invoices are issued from
+													premise</label>
+												<select class="form-select form-select-sm">
+													<option selected disabled>Select</option>
+													<option>Yes</option>
+													<option>No</option>
+												</select>
+											</div>
+										</div>
+
+										<h6 class="bg-primary text-white p-2 rounded">Address</h6>
+										<div class="row g-2">
+											<div class="col-md-3">
+												<input type="text" class="form-control form-control-sm"
+													placeholder="SCO/Booth/Shop/Building /Flat/Floor/Door No.">
+											</div>
+											<div class="col-md-3">
+												<input type="text" class="form-control form-control-sm"
+													placeholder="Building Name/Mohalla/Colony /Market Place/Street/Lane">
+											</div>
+											<div class="col-md-3">
+												<input type="text" class="form-control form-control-sm"
+													placeholder="Sector/Area">
+											</div>
+											<div class="col-md-3">
+												<input type="text" class="form-control form-control-sm"
+													placeholder="City/Town/Village">
+											</div>
+											<div class="col-md-3">
+												<input type="text" class="form-control form-control-sm"
+													placeholder="Post Office">
+											</div>
+											<div class="col-md-3">
+												<select class="form-select form-select-sm">
+													<option selected>Other</option>
+												</select>
+											</div>
+											<div class="col-md-3">
+												<input type="text" class="form-control form-control-sm"
+													placeholder="Please mention the District">
+											</div>
+											<div class="col-md-3">
+												<select class="form-select form-select-sm">
+													<option selected disabled>Select State</option>
+													<option>Maharashtra</option>
+													<option>Karnataka</option>
+													<option>Tamil Nadu</option>
+													<!-- Add more as needed -->
+												</select>
+											</div>
+											<div class="col-md-3">
+												<input type="text" class="form-control form-control-sm"
+													placeholder="Pin Code">
+											</div>
+											<div class="col-md-3">
+												<input type="text" class="form-control form-control-sm" value="India"
+													readonly>
+											</div>
+											<div class="col-md-3">
+												<input type="text" class="form-control form-control-sm"
+													placeholder="Telephone No.">
+											</div>
+											<div class="col-md-3 d-flex">
+												<span class="input-group-text p-1 pe-2">+91</span>
+												<input type="text" class="form-control form-control-sm"
+													placeholder="Mobile No.">
+											</div>
+											<div class="col-md-3 d-flex">
+												<span class="input-group-text p-1 pe-2">+91</span>
+												<input type="text" class="form-control form-control-sm"
+													placeholder="FAX No.">
+											</div>
+											<div class="col-md-3">
+												<input type="email" class="form-control form-control-sm"
+													placeholder="E-mail Address">
+											</div>
+											<div class="col-md-3">
+												<input type="text" class="form-control form-control-sm"
+													placeholder="TIN in the respective State">
+											</div>
+											<div class="col-md-3">
+												<input type="text" class="form-control form-control-sm"
+													placeholder="Ward">
+											</div>
+										</div>
+										<br>
+										<div class="row g-2 mb-3 justify-content-center">
+											<div class="col-auto text-center">
+												<button class="btn btn-primary me-2" type="button"
+													id="saveBtn">Save</button>
+												<button class="btn btn-secondary me-2" type="button"
+													id="clearBtn">Clear</button>
+												<button class="btn btn-danger" type="button"
+													id="deleteBtn">Delete</button>
+											</div>
+										</div>
+
+										<div class="text-center mt-3">
+											<button class="btn btn-outline-primary">Validate Annexure
+												II</button>
+										</div>
+									</fieldset>
+
+								</div>
+
+							</section>
+						</div>
+
+						<div *ngSwitchCase="'Annexure III'" class="tab-content">
+							<section>
+								<fieldset class="border p-3">
+									<legend class="w-auto px-2 fw-bold" style="text-align: center;">Annexure III
+									</legend>
+
+									<div
+										style="background-color: #e0eefa; color: #000; padding: 8px; border-radius: 5px;">
+										&mdash; Click on the <strong>"View/Edit"</strong> The list of Goods
+										required
+										to be
+										purchased at concessional rate of tax under sub-section (4) of section 7
+									</div>
+
+									<div class="form-check mb-3">
+										<input class="form-check-input" type="checkbox" id="annexureNotApplicable">
+										<label class="form-check-label" for="annexureNotApplicable">Tick if
+											Annexure
+											Not
+											Applicable</label>
+									</div>
+
+									<!-- Section 1 -->
+									<div class="border p-3 mb-4 bg-light">
+										<h6 class="bg-primary text-white p-2 rounded">1. For use in manufacture
+											of
+											goods for
+											sale.</h6>
+
+										<div class="table-responsive mb-2">
+											<table class="table table-bordered table-sm text-center align-middle">
+												<thead class="table-primary">
+													<tr>
+														<th>Select</th>
+														<th>View / Edit</th>
+														<th>Sr. No.</th>
+														<th>Name and Description of Goods/Commodity</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td colspan="4">No content in table</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+
+										<div class="row g-2 mb-3">
+											<div class="col-md-6 d-flex align-items-center">
+												<label class="form-label me-2 mb-0" style="white-space: nowrap;">Name
+													and
+													Description of Goods/Commodity</label>
+												<select class="form-select form-select-sm flex-grow-1">
+													<option selected disabled>Select</option>
+													<option>ATF (Aviation Turbine Fuel)</option>
+													<option>Diesel</option>
+													<option>Liquor Fit For Human Consumption</option>
+													<option>Natural Gases</option>
+													<option>Petrol</option>
+													<option>Petroleum Crude</option>
+												</select>
+											</div>
+										</div>
+
+
+										<div class="row g-2 mb-3 justify-content-center">
+											<div class="col-auto text-center">
+												<button type="button" class="btn btn-primary me-2">Save</button>
+												<button type="button" class="btn btn-secondary me-2">Clear</button>
+												<button type="button" class="btn btn-danger">Delete</button>
+											</div>
+										</div>
+									</div>
+
+									<!-- Section 2 -->
+									<div class="border p-3 mb-4 bg-light">
+										<h6 class="bg-primary text-white p-2 rounded">2. For use in
+											telecommunication
+											network.
+										</h6>
+
+										<div class="table-responsive mb-2">
+											<table class="table table-bordered table-sm text-center align-middle">
+												<thead class="table-primary">
+													<tr>
+														<th>Select</th>
+														<th>View / Edit</th>
+														<th>Sr. No.</th>
+														<th>Name and Description of Goods/Commodity</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td colspan="4">No content in table</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+
+										<div class="row g-2 mb-3">
+											<div class="col-md-6 d-flex align-items-center">
+												<label class="form-label me-2 mb-0" style="white-space: nowrap;">Name
+													and
+													Description of Goods/Commodity</label>
+												<select class="form-select form-select-sm flex-grow-1">
+													<option selected disabled>Select</option>
+													<option>ATF (Aviation Turbine Fuel)</option>
+													<option>Diesel</option>
+													<option>Liquor Fit For Human Consumption</option>
+													<option>Natural Gases</option>
+													<option>Petrol</option>
+													<option>Petroleum Crude</option>
+												</select>
+											</div>
+										</div>
+
+
+										<div class="row g-2 mb-3 justify-content-center">
+											<div class="col-auto text-center">
+												<button type="button" class="btn btn-primary me-2 ">Save</button>
+												<button type="button" class="btn btn-secondary me-2 ">Clear</button>
+												<button type="button" class="btn btn-danger me-2 ">Delete</button>
+											</div>
+										</div>
+									</div>
+
+									<!-- Section 3 -->
+									<div class="border p-3 bg-light">
+										<h6 class="bg-primary text-white p-2 rounded">3. For use in mining.</h6>
+
+										<div class="table-responsive mb-2">
+											<table class="table table-bordered table-sm text-center align-middle">
+												<thead class="table-primary">
+													<tr>
+														<th>Select</th>
+														<th>View / Edit</th>
+														<th>Sr. No.</th>
+														<th>Name and Description of Goods/Commodity</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td colspan="4">No content in table</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+
+										<div class="row g-2 mb-3">
+											<div class="col-md-6 d-flex align-items-center">
+												<label class="form-label me-2 mb-0" style="white-space: nowrap;">Name
+													and
+													Description of Goods/Commodity</label>
+												<select class="form-select form-select-sm flex-grow-1">
+													<option selected disabled>Select</option>
+													<option>ATF (Aviation Turbine Fuel)</option>
+													<option>Diesel</option>
+													<option>Liquor Fit For Human Consumption</option>
+													<option>Natural Gases</option>
+													<option>Petrol</option>
+													<option>Petroleum Crude</option>
+												</select>
+											</div>
+										</div>
+
+
+										<div class="row g-2 mb-3 justify-content-center">
+											<div class="col-auto text-center">
+												<button type="button" class="btn btn-primary me-2">Save</button>
+												<button type="button" class="btn btn-secondary me-2 ">Clear</button>
+												<button type="button" class="btn btn-danger  ">Delete</button>
+											</div>
+										</div>
+									</div>
+
+									<!-- Section 4 -->
+									<div class="border p-3 bg-light">
+										<h6 class="bg-primary text-white p-2 rounded">3. For use in generation
+											and
+											distribution
+											of electricity or any other form of power.</h6>
+
+										<div class="table-responsive mb-2">
+											<table class="table table-bordered table-sm text-center align-middle">
+												<thead class="table-primary">
+													<tr>
+														<th>Select</th>
+														<th>View / Edit</th>
+														<th>Sr. No.</th>
+														<th>Name and Description of Goods/Commodity</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td colspan="4">No content in table</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+
+										<div class="row g-2 mb-3">
+											<div class="col-md-6 d-flex align-items-center">
+												<label class="form-label me-2 mb-0" style="white-space: nowrap;">Name
+													and
+													Description of Goods/Commodity</label>
+												<select class="form-select form-select-sm flex-grow-1">
+													<option selected disabled>Select</option>
+													<option>ATF (Aviation Turbine Fuel)</option>
+													<option>Diesel</option>
+													<option>Liquor Fit For Human Consumption</option>
+													<option>Natural Gases</option>
+													<option>Petrol</option>
+													<option>Petroleum Crude</option>
+												</select>
+											</div>
+										</div>
+
+
+										<div class="row g-2 mb-3 justify-content-center">
+											<div class="col-auto text-center">
+												<button type="button" class="btn btn-primary me-2">Save</button>
+												<button type="button" class="btn btn-secondary me-2">Clear</button>
+												<button type="button" class="btn btn-danger">Delete</button>
+											</div>
+										</div>
+									</div>
+
+									<!-- Section 5 -->
+									<div class="border p-3 bg-light">
+										<h6 class="bg-primary text-white p-2 rounded">3. For use in packing of
+											goods
+											specified
+											in entries at Serials 1 to 4 above, as the case may be</h6>
+
+										<div class="table-responsive mb-2">
+											<table class="table table-bordered table-sm text-center align-middle">
+												<thead class="table-primary">
+													<tr>
+														<th>Select</th>
+														<th>View / Edit</th>
+														<th>Sr. No.</th>
+														<th>Name and Description of Goods/Commodity</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td colspan="4">No content in table</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+
+										<div class="row g-2 mb-3">
+											<div class="col-md-6 d-flex align-items-center">
+												<label class="form-label me-2 mb-0" style="white-space: nowrap;">Name
+													and
+													Description of Goods/Commodity</label>
+												<select class="form-select form-select-sm flex-grow-1">
+													<option selected disabled>Select</option>
+													<option>ATF (Aviation Turbine Fuel)</option>
+													<option>Diesel</option>
+													<option>Liquor Fit For Human Consumption</option>
+													<option>Natural Gases</option>
+													<option>Petrol</option>
+													<option>Petroleum Crude</option>
+												</select>
+											</div>
+										</div>
+
+										<div class="row g-2 mb-3 justify-content-center">
+											<div class="col-auto text-center">
+												<button type="button" class="btn btn-primary me-2">Save</button>
+												<button type="button" class="btn btn-secondary me-2">Clear</button>
+												<button type="button" class="btn btn-danger">Delete</button>
+											</div>
+										</div>
+									</div>
+
+									<div class="text-center mt-3">
+										<button class="btn btn-outline-primary">Validate Annexure III</button>
+									</div>
+								</fieldset>
+
+							</section>
+						</div>
+						<div *ngSwitchCase="'Annexure V'" class="tab-content">
+							<section>
+								<fieldset class="border p-3">
+									<legend class="w-auto px-2 fw-bold text-center">Annexure V</legend>
+									<div
+										style="background-color: #e0eefa; color: #000; padding: 8px; border-radius: 5px; text-align: center;">
+										-Click on the "View/Edit" button below as appearing besides each Name to
+										view and
+										fill
+										respective Annexure V for that Person
+									</div>
+									<div
+										style="background-color: #e0eefa; color: #000; padding: 8px; border-radius: 5px; text-align: center;">
+										-To remove any name in the list below, please delete the corresponding
+										entry
+										int the
+										table at serial number 23 of Form VAT A1
+									</div>
+
+
+									<div class="border p-3 bg-light">
+										<h6 class="bg-primary text-white p-2 rounded">3. For use in packing of
+											goods
+											specified
+											in entries at Serials 1 to 4 above, as the case may be</h6>
+
+										<div class="table-responsive mb-2">
+											<table class="table table-bordered table-sm text-center align-middle">
+												<thead class="table-primary">
+													<tr>
+
+														<th>View / Edit</th>
+														<th>Sr. No.</th>
+														<th>Name </th>
+														<th>Desingation</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td colspan="4">No content in table</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+
+
+
+										<div
+											style="background-color: #e0eefa; color: #000; padding: 8px; border-radius: 5px; text-align: center;">
+											Annexure V
+										</div>
+										<div
+											style="background-color: #e0eefa; color: #000; padding: 8px; border-radius: 5px; text-align: center;">
+											Additional Details of Business
+										</div>
+
+										<div class="form-check mb-3">
+											<input class="form-check-input" type="checkbox" id="annexureNotApplicable">
+											<label class="form-check-label" for="annexureNotApplicable">Tick if
+												Annexure Not
+												Applicable</label>
+										</div>
+
+
+										<div class="row mb-3 align-items-center">
+											<label class="col-sm-4 col-form-label">(1) Name</label>
+											<div class="col-sm-6">
+												<input type="text" class="form-control form-control-sm">
+											</div>
+										</div>
+
+										<div class="row mb-3 align-items-center">
+											<label class="col-sm-4 col-form-label">(2) Designation</label>
+											<div class="col-sm-6">
+												<input type="text" class="form-control form-control-sm">
+											</div>
+										</div>
+
+										<div class="row mb-3 align-items-center">
+											<label class="col-sm-4 col-form-label">(3) Father's/Husband's
+												Name</label>
+											<div class="col-sm-6">
+												<input type="text" class="form-control form-control-sm">
+											</div>
+										</div>
+
+										<div class="row mb-3 align-items-center">
+											<label class="col-sm-4 col-form-label">(4) Date Of Birth</label>
+											<div class="col-sm-6">
+												<input type="text" class="form-control form-control-sm">
+											</div>
+										</div>
+
+										<div class="row mb-3 align-items-center">
+											<label class="col-sm-4 col-form-label">(5) Permanent Account Number
+												(PAN)</label>
+											<div class="col-sm-6">
+												<input type="text" class="form-control form-control-sm">
+											</div>
+										</div>
+
+										<div class="row mb-3 align-items-center">
+											<label class="col-sm-4 col-form-label">(6) Unique Identification
+												(UID)/Aadhar
+												Number</label>
+											<div class="col-sm-6">
+												<input type="text" class="form-control form-control-sm">
+											</div>
+										</div>
+
+										<div class="row mb-3 align-items-center">
+											<label class="col-sm-4 col-form-label">(7) Director Identification
+												Number
+												(DIN)/Aadhar Number</label>
+											<div class="col-sm-6">
+												<input type="text" class="form-control form-control-sm">
+											</div>
+										</div>
+
+										<div class="row mb-3 align-items-center">
+											<label class="col-sm-4 col-form-label">(8) Date of joining as
+												authorized
+												person
+											</label>
+											<div class="col-sm-6">
+												<input type="text" class="form-control form-control-sm">
+											</div>
+										</div>
+										<div class="row mb-3 align-items-center">
+											<label class="col-sm-4 col-form-label">(9) Name of the Authorizer
+											</label>
+											<div class="col-sm-6">
+												<input type="text" class="form-control form-control-sm">
+											</div>
+										</div>
+										<div class="row mb-3 align-items-center">
+											<label class="col-sm-4 col-form-label">(10) Status of authorizer
+											</label>
+											<div class="col-sm-6">
+												<input type="text" class="form-control form-control-sm">
+											</div>
+										</div>
+
+
+										<div class="container">
+											<!-- Present Address -->
+											<h6 class="bg-primary text-white p-2 rounded">(11) Present Address
+											</h6>
+
+											<div class="row mb-3">
+												<div class="col-md-3">
+													<label for="presentDoorNo" class="form-label">Door No.<span
+															class="text-danger">*</span></label>
+												</div>
+												<div class="col-md-3">
+													<input type="text" class="form-control" id="presentDoorNo" />
+												</div>
+												<div class="col-md-3">
+													<label for="presentStreet" class="form-label">Street<span
+															class="text-danger">*</span></label>
+												</div>
+												<div class="col-md-3">
+													<input type="text" class="form-control" id="presentStreet" />
+												</div>
+											</div>
+
+											<div class="row mb-3">
+												<div class="col-md-3">
+													<label for="presentSector" class="form-label">Sector</label>
+												</div>
+												<div class="col-md-3">
+													<input type="text" class="form-control" id="presentSector" />
+												</div>
+												<div class="col-md-3">
+													<label for="presentCity" class="form-label">City<span
+															class="text-danger">*</span></label>
+												</div>
+												<div class="col-md-3">
+													<input type="text" class="form-control" id="presentCity" />
+												</div>
+											</div>
+
+											<div class="row mb-3">
+												<div class="col-md-3">
+													<label for="presentPost" class="form-label">Post
+														Office</label>
+												</div>
+												<div class="col-md-3">
+													<input type="text" class="form-control" id="presentPost" />
+												</div>
+												<div class="col-md-3">
+													<label for="presentDistrict" class="form-label">District<span
+															class="text-danger">*</span></label>
+												</div>
+												<div class="col-md-3">
+													<select class="form-select" id="presentDistrict">
+														<option>Select</option>
+													</select>
+												</div>
+											</div>
+
+											<div class="row mb-3">
+												<div class="col-md-3">
+													<label for="presentPin" class="form-label">Pin Code<span
+															class="text-danger">*</span></label>
+												</div>
+												<div class="col-md-3">
+													<input type="text" class="form-control" id="presentPin" />
+												</div>
+												<div class="col-md-3">
+													<label for="presentState" class="form-label">State<span
+															class="text-danger">*</span></label>
+												</div>
+												<div class="col-md-3">
+													<select class="form-select" id="presentState">
+														<option>Select</option>
+													</select>
+												</div>
+											</div>
+
+											<div class="row mb-3">
+												<div class="col-md-3">
+													<label for="presentCountry" class="form-label">Country<span
+															class="text-danger">*</span></label>
+												</div>
+												<div class="col-md-3">
+													<select class="form-select" id="presentCountry">
+														<option>Select</option>
+													</select>
+												</div>
+												<div class="col-md-3">
+													<label for="presentTelephone" class="form-label">Telephone
+														No.</label>
+												</div>
+												<div class="col-md-3">
+													<div class="input-group">
+														<span class="input-group-text">+91</span>
+														<input type="text" class="form-control" id="presentTelephone" />
+													</div>
+												</div>
+											</div>
+
+											<div class="row mb-3">
+												<div class="col-md-3">
+													<label for="presentFax" class="form-label">FAX No.</label>
+												</div>
+												<div class="col-md-3">
+													<div class="input-group">
+														<span class="input-group-text">+91</span>
+														<input type="text" class="form-control" id="presentFax" />
+													</div>
+												</div>
+												<div class="col-md-3">
+													<label for="presentMobile" class="form-label">Mobile
+														No.<span class="text-danger">*</span></label>
+												</div>
+												<div class="col-md-3">
+													<div class="input-group">
+														<span class="input-group-text">+91</span>
+														<input type="text" class="form-control" id="presentMobile" />
+													</div>
+												</div>
+											</div>
+
+											<div class="row mb-4">
+												<div class="col-md-3">
+													<label for="presentEmail" class="form-label">Email<span
+															class="text-danger">*</span></label>
+												</div>
+												<div class="col-md-9">
+													<input type="email" class="form-control" id="presentEmail" />
+												</div>
+											</div>
+
+											<!-- Permanent Address -->
+											<h6 class="bg-primary text-white p-2 rounded">(12) Permanent Address
+											</h6>
+
+											<div class="form-check mb-3">
+												<input class="form-check-input" type="checkbox" id="sameAsPresent" />
+												<label class="form-check-label" for="sameAsPresent">Same as
+													Present
+													Address</label>
+											</div>
+
+											<div class="row mb-3">
+												<div class="col-md-3">
+													<label for="permDoorNo" class="form-label">Door No.<span
+															class="text-danger">*</span></label>
+												</div>
+												<div class="col-md-3">
+													<input type="text" class="form-control" id="permDoorNo" />
+												</div>
+												<div class="col-md-3">
+													<label for="permStreet" class="form-label">Street<span
+															class="text-danger">*</span></label>
+												</div>
+												<div class="col-md-3">
+													<input type="text" class="form-control" id="permStreet" />
+												</div>
+											</div>
+
+
+										</div>
+
+
+									</div>
+
+
+
+									<!-- Save Button -->
+									<div class="text-center mt-3">
+										<button class="btn btn-outline-primary">Save Annexure</button>
+									</div>
+								</fieldset>
+
+							</section>
+						</div>
+						<div *ngSwitchCase="'Annexure VI'" class="tab-content">
+							<section>
+								<fieldset class="border p-3">
+									<legend class="w-auto px-2 fw-bold text-center">Annexure VI</legend>
+
+									<div
+										style="background-color: #e0eefa; color: #000; padding: 8px; border-radius: 5px; text-align: center;">
+										Annexure VI
+									</div>
+									<div
+										style="background-color: #e0eefa; color: #000; padding: 8px; border-radius: 5px; text-align: center;">
+										Additional Details of Business
+									</div>
+
+									<div class="form-check mb-3">
+										<input class="form-check-input" type="checkbox" id="annexureNotApplicable">
+										<label class="form-check-label" for="annexureNotApplicable">Tick if
+											Annexure
+											Not
+											Applicable</label>
+									</div>
+
+									<div class="row mb-2 align-items-center">
+										<div class="col-md-6 d-flex align-items-center">
+											<label class="form-label mb-0 me-2" style="min-width: 250px;">Central
+												Excise
+												Registration Number</label>
+											<input type="text" class="form-control form-control-sm" />
+										</div>
+									</div>
+
+									<div class="row mb-2 align-items-center">
+										<div class="col-md-6 d-flex align-items-center">
+											<label class="form-label mb-0 me-2" style="min-width: 250px;">Service
+												Tax
+												No.</label>
+											<input type="text" class="form-control form-control-sm" />
+										</div>
+									</div>
+
+									<div class="row mb-2 align-items-center">
+										<div class="col-md-6 d-flex align-items-center">
+											<label class="form-label mb-0 me-2" style="min-width: 250px;">Import
+												Export Code
+												No.</label>
+											<input type="text" class="form-control form-control-sm" />
+										</div>
+									</div>
+
+									<div class="row mb-2 align-items-center">
+										<div class="col-md-6 d-flex align-items-center">
+											<label class="form-label mb-0 me-2" style="min-width: 250px;">Corporate
+												Identity
+												No.
+												(CIN)</label>
+											<input type="text" class="form-control form-control-sm" />
+										</div>
+									</div>
+
+
+
+									<div class="text-primary" style="font-size: 0.875rem;">
+										Note : CIN should be of 21 digits as explained in the illustration below
+									</div>
+									<div class="text-primary" style="font-size: 0.875rem;">
+										CIN Format: U15541RJ1998PLC015216
+									</div>
+
+									<div class="fw-bold mt-4">Please provide the Registration number if the
+										Business
+										is
+										already
+										registered with same PAN under</div>
+
+
+									<div class="row mb-2 align-items-center">
+										<div class="col-md-6 d-flex align-items-center">
+											<label class="form-label mb-0 me-2" style="min-width: 250px;">The
+												Punjab
+												Passengers
+												& Goods Taxation Act, 1952</label>
+											<input type="text" class="form-control form-control-sm" />
+										</div>
+									</div>
+
+									<div class="row mb-2 align-items-center">
+										<div class="col-md-6 d-flex align-items-center">
+											<label class="form-label mb-0 me-2" style="min-width: 250px;">The
+												Punjab
+												Entertainments Duty Act, 1955</label>
+											<input type="text" class="form-control form-control-sm" />
+										</div>
+									</div>
+
+									<div class="row mb-2 align-items-center">
+										<div class="col-md-6 d-flex align-items-center">
+											<label class="form-label mb-0 me-2" style="min-width: 250px;">The
+												Haryana Tax on
+												Luxuries Act, 2007</label>
+											<input type="text" class="form-control form-control-sm" />
+										</div>
+									</div>
+
+
+									<div class="text-center mt-3">
+										<button class="btn btn-outline-primary">Validate Annexure VI</button>
+									</div>
+								</fieldset>
+							</section>
+						</div>
+						<div *ngSwitchCase="'CST Form A'" class="tab-content">
+							<section>
+								<fieldset class="border p-3 mb-4">
+									<legend class="w-auto px-2 fw-bold text-center">Application to be furnished
+										in
+										FORM A
+									</legend>
+
+									<div class="text-center fw-semibold"
+										style="background-color: #e0eefa; padding: 8px;">
+										Application to be furnished in FORM A for Registration under section
+										7(1)/7(2) of
+										the
+										Central Sales Tax Act, 1956<br>
+										(As per Rule 3)
+									</div>
+
+									<div class="mb-4">To<br>
+										The Assessing Authority,<br>
+										Excise and Taxation Department
+									</div>
+
+									<div class="mb-3 row">
+										<label class="col-sm-3 col-form-label">District</label>
+										<div class="col-sm-3">
+											<select class="form-select form-select-sm">
+												<option selected>Ambala</option>
+											</select>
+										</div>
+
+										<label class="col-sm-3 col-form-label">State</label>
+										<div class="col-sm-3">
+											<select class="form-select form-select-sm">
+												<option selected>Haryana</option>
+											</select>
+										</div>
+									</div>
+
+									<div class="mb-3 row">
+										<label class="col-sm-3 col-form-label">Name of Primary (1st)
+											Applicant/1st
+											Partner</label>
+										<div class="col-sm-3">
+											<input type="text" class="form-control form-control-sm">
+										</div>
+
+										<label class="col-sm-3 col-form-label">Status</label>
+										<div class="col-sm-3">
+											<select class="form-select form-select-sm">
+												<option selected>Select</option>
+											</select>
+										</div>
+									</div>
+
+									<div class="mb-3 row">
+										<label class="col-sm-3 col-form-label">Father's Name</label>
+										<div class="col-sm-3">
+											<input type="text" class="form-control form-control-sm">
+										</div>
+
+										<label class="col-sm-3 col-form-label">Name & Style of Business</label>
+										<div class="col-sm-3">
+											<input type="text" class="form-control form-control-sm">
+										</div>
+									</div>
+									<div class="mb-3 row">
+										<label class="col-sm-6 col-form-label">Name of person deemed to be
+											manager
+											in
+											relation
+											to the business of the dealer in the said state</label>
+										<div class="col-sm-6">
+											<input type="text" class="form-control form-control-sm">
+										</div>
+									</div>
+
+									<div class="mb-3 row">
+										<label class="col-sm-6 col-form-label">
+											Status or relationship of the person who makes this application.<br>
+											<small>(e.g. manager, partner, proprietor, director,
+												officer-in-charge
+												of the
+												Government business)</small>
+										</label>
+										<div class="col-sm-6">
+											<input type="text" class="form-control form-control-sm">
+										</div>
+									</div>
+
+									<div class="mb-3 row">
+										<label class="col-sm-6 col-form-label">Name of the principal place of
+											business in
+											the
+											said State and address thereof</label>
+										<div class="col-sm-6">
+											<input type="text" class="form-control form-control-sm">
+										</div>
+									</div>
+
+									<!-- Section 4 -->
+									<div class="mt-4">
+										<div class="bg-primary text-white fw-bold p-2"> (4) Name(s) of the other
+											place(s) in
+											the
+											said State in which business is carried on and address of every such
+											place.
+										</div>
+										<table class="table table-bordered table-sm mb-0">
+											<thead>
+												<tr>
+													<th>Sr. No.</th>
+													<th>Name and Address of Premises</th>
+													<th>Ward</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td colspan="3" class="text-center">No content in table</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+
+									<!-- Section 5 -->
+									<div class="mt-4">
+										<div class="bg-primary text-white fw-bold p-2"> (5) Complete list of the
+											warehouses
+											in
+											the said State in which the goods relating to the business are
+											warehoused and
+											address of every such warehouse. </div>
+										<table class="table table-bordered table-sm mb-0">
+											<thead>
+												<tr>
+													<th>Sr. No.</th>
+													<th>Name and Address of Premises</th>
+													<th>Ward</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td colspan="3" class="text-center">No content in table</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+
+									<!-- Section 6 -->
+									<div class="mt-4">
+										<div class="bg-primary text-white fw-bold p-2">
+											(6) List of the places of business in each of the other States
+											together
+											with the
+											address of every such place (if separate application for
+											registration
+											has been
+											made,
+											or separate registration obtained under the Central Sales Tax, Act,
+											1956
+											in
+											respect
+											of any such place of business, particulars thereof should be given
+											in
+											detail).
+										</div>
+										<table class="table table-bordered table-sm mb-0">
+											<thead>
+												<tr>
+													<th>Sr. No.</th>
+													<th>Name and Address of Premises</th>
+													<th>Ward</th>
+													<th>TIN in the Respective State</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td colspan="4" class="text-center">No content in table</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<!-- Section 7 -->
+									<div class="mb-4">
+										<label class="fw-bold">(7) The business is <span
+												class="text-danger">*</span></label>
+										<div class="row mb-2">
+											<label class="col-sm-4 col-form-label">Wholly</label>
+											<div class="col-sm-4"><input type="text"
+													class="form-control form-control-sm">
+											</div>
+										</div>
+										<div class="row mb-2">
+											<label class="col-sm-4 col-form-label">Mainly</label>
+											<div class="col-sm-4"><input type="text"
+													class="form-control form-control-sm">
+											</div>
+										</div>
+										<div class="row mb-2">
+											<label class="col-sm-4 col-form-label">Partly</label>
+											<div class="col-sm-4"><input type="text"
+													class="form-control form-control-sm">
+											</div>
+										</div>
+										<div class="row mb-2">
+											<label class="col-sm-4 col-form-label">Partly</label>
+											<div class="col-sm-4"><input type="text"
+													class="form-control form-control-sm">
+											</div>
+										</div>
+									</div>
+
+									<!-- Section 8 -->
+									<div class="mb-4">
+										<label class="fw-bold">(8) Particulars relating to registration, License
+											permission
+											etc.</label>
+										<div class="row mb-2">
+											<label class="col-sm-4 col-form-label">Central Excise Registration
+												Number</label>
+											<div class="col-sm-4"><input type="text"
+													class="form-control form-control-sm">
+											</div>
+										</div>
+										<div class="row mb-2">
+											<label class="col-sm-4 col-form-label">Service Tax Number</label>
+											<div class="col-sm-4"><input type="text"
+													class="form-control form-control-sm">
+											</div>
+										</div>
+										<div class="row mb-2">
+											<label class="col-sm-4 col-form-label">Import Export Code
+												Number</label>
+											<div class="col-sm-4"><input type="text"
+													class="form-control form-control-sm">
+											</div>
+										</div>
+										<div class="row mb-2">
+											<label class="col-sm-4 col-form-label">Corporate Identity Number
+												(CIN)</label>
+											<div class="col-sm-4"><input type="text"
+													class="form-control form-control-sm">
+											</div>
+										</div>
+									</div>
+
+									<!-- Section 9 -->
+									<div class="row mb-2 align-items-center">
+										<label class="col-sm-4 col-form-label fw-bold">(9) We are member
+											of</label>
+										<div class="col-sm-8">
+											<input type="text" class="form-control form-control-sm"
+												placeholder="Enter the name of the Chamber of Commerce, Trade Association, or commercial body">
+										</div>
+									</div>
+
+
+
+									<!-- Section 10 -->
+									<div class="row mb-2 align-items-center">
+										<label class="col-sm-4 col-form-label fw-bold">(10) We keep our accounts
+											in
+											the
+											language
+											and script of</label>
+										<div class="col-sm-8">
+											<input type="text" class="form-control form-control-sm">
+										</div>
+									</div>
+
+									<!-- Section 11 -->
+									<div class="mb-4">
+										<div class="bg-primary text-white fw-bold p-2">
+											(11) Name(s) and address(es) of the proprietor / partners / all
+											persons
+											having
+											any
+											interest in the business
+										</div>
+										<table class="table table-bordered table-sm mb-0">
+											<thead class="table-light">
+												<tr>
+													<th>Sr. No.</th>
+													<th>Name in full</th>
+													<th>Father’s / Husband’s Name</th>
+													<th>Age</th>
+													<th>Extent of interest in the business</th>
+													<th>Present Address</th>
+													<th>Permanent Address</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+
+									<!-- Section 12 -->
+									<div class="row mb-4 align-items-center">
+										<label class="col-sm-6 col-form-label fw-bold">(12) Business in respect
+											of
+											which
+											this
+											application is made was first started on</label>
+										<div class="col-sm-6">
+											<input type="date" class="form-control form-control-sm">
+										</div>
+									</div>
+
+									<!-- Section 13 -->
+									<div class="row mb-4 align-items-center">
+										<label class="col-sm-6 col-form-label fw-bold">(13) The first sale in
+											the
+											course of
+											Inter-State trade was effected on</label>
+										<div class="col-sm-6">
+											<input type="date" class="form-control form-control-sm">
+										</div>
+									</div>
+
+
+									<!-- Section 14 -->
+									<div class="row mb-4 align-items-center">
+										<label class="col-sm-3 fw-bold mb-0">(14) We observe the</label>
+										<div class="col-sm-4">
+											<input type="text" class="form-control form-control-sm">
+										</div>
+										<label class="col-sm-3 form-label mb-0">Calendar</label>
+									</div>
+
+
+									<!-- Section 14(a) -->
+									<div class="mb-4">
+										<label class="fw-bold">(14)(a) For purposes of accounts our year runs
+											<span class="text-danger">*</span></label>
+										<div class="row g-2 mb-2">
+											<div class="col-md-3">
+												<label class="form-label">from the (English date)</label>
+												<div class="input-group">
+													<input type="text" class="form-control form-control-sm" value="1ST"
+														style="max-width: 80px;">
+													<select class="form-select form-select-sm">
+														<option selected>April</option>
+														<!-- Other months -->
+													</select>
+												</div>
+											</div>
+											<div class="col-md-3">
+												<label class="form-label">from the (Indian date)</label>
+												<div class="input-group">
+													<input type="text" class="form-control form-control-sm"
+														placeholder="Day">
+													<input type="text" class="form-control form-control-sm"
+														placeholder="Month">
+												</div>
+											</div>
+											<div class="col-md-3">
+												<label class="form-label">to (English/Indian date)</label>
+												<div class="input-group">
+													<input type="text" class="form-control form-control-sm" value="31ST"
+														style="max-width: 80px;">
+													<select class="form-select form-select-sm">
+														<option selected>March</option>
+														<!-- Other months -->
+													</select>
+												</div>
+											</div>
+											<div class="col-md-3">
+												<label class="form-label">to (Indian date)</label>
+												<div class="input-group">
+													<input type="text" class="form-control form-control-sm"
+														placeholder="Day">
+													<input type="text" class="form-control form-control-sm"
+														placeholder="Month">
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<!-- Section 15 -->
+									<div class="row mb-4 align-items-center">
+										<label class="col-sm-6 col-form-label fw-bold mb-0">
+											(15) We make up our accounts of sales to date at the end of every
+										</label>
+										<div class="col-sm-6">
+											<select class="form-select form-select-sm" style="max-width: 300px;">
+												<option>Select</option>
+											</select>
+										</div>
+									</div>
+
+
+									<!-- Section 16 -->
+									<div class="mb-4">
+										<div class="fw-bold bg-primary text-white p-2">(16) The following goods
+											or
+											classes
+											of
+											goods are purchased by the dealer in the course of inter-state trade
+											or
+											commerce
+											for:</div>
+
+										<!-- 16(a) For Resale -->
+										<div class="mt-3 border rounded p-2">
+											<div class="fw-bold text-primary">(a) for resale</div>
+											<table class="table table-bordered table-sm text-center">
+												<thead class="table-light">
+													<tr>
+														<th>Select</th>
+														<th>View / Edit</th>
+														<th>Sr. No.</th>
+														<th>Name and Description of Goods/Commodity</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td colspan="4">No content in table</td>
+													</tr>
+												</tbody>
+											</table>
+											<div class="row g-2 mb-2">
+												<div class="col-md-6 d-flex align-items-center">
+													<label class="form-label me-2 mb-0"
+														style="white-space: nowrap;">Name
+														and
+														Description of Goods/Commodity</label>
+													<select class="form-select form-select-sm" style="flex: 1;">
+														<option>Select</option>
+													</select>
+												</div>
+											</div>
+											<div class="row g-2 mb-3 justify-content-center">
+												<div class="col-auto text-center">
+													<button type="button" class="btn btn-primary me-2">Save</button>
+													<button type="button" class="btn btn-secondary me-2">Clear</button>
+													<button type="button" class="btn btn-danger">Delete</button>
+												</div>
+											</div>
+										</div>
+
+										<!-- 16(b) For Manufacture -->
+										<div class="mt-4 border rounded p-2">
+											<div class="fw-bold text-primary">(b) use in the manufacture or
+												processing of
+												goods
+												for sale</div>
+											<table class="table table-bordered table-sm text-center">
+												<thead class="table-light">
+													<tr>
+														<th>Select</th>
+														<th>View / Edit</th>
+														<th>Sr. No.</th>
+														<th>Name and Description of Goods/Commodity</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td colspan="4">No content in table</td>
+													</tr>
+												</tbody>
+											</table>
+											<div class="row g-2 mb-2">
+												<div class="col-md-6">
+													<label class="form-label">Name and Description of
+														Goods/Commodity</label>
+													<select class="form-select form-select-sm">
+														<option>Select</option>
+													</select>
+												</div>
+											</div>
+											<div class="row g-2 mb-3 justify-content-center">
+												<div class="col-auto text-center">
+													<button type="button" class="btn btn-primary me-2 ">Save</button>
+													<button type="button" class="btn btn-secondary me-2 ">Clear</button>
+													<button type="button" class="btn btn-danger me-2 ">Delete</button>
+												</div>
+											</div>
+										</div>
+
+										<!-- 16(c) For Mining -->
+										<div class="mt-4 border rounded p-2">
+											<div class="fw-bold text-primary">(c) use in mining</div>
+											<table class="table table-bordered table-sm text-center">
+												<thead class="table-light">
+													<tr>
+														<th>Select</th>
+														<th>View / Edit</th>
+														<th>Sr. No.</th>
+														<th>Name and Description of Goods/Commodity</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td colspan="4">No content in table</td>
+													</tr>
+												</tbody>
+											</table>
+											<div class="row g-2 mb-2">
+												<div class="col-md-6">
+													<label class="form-label">Name and Description of
+														Goods/Commodity</label>
+													<select class="form-select form-select-sm">
+														<option>Select</option>
+													</select>
+												</div>
+											</div>
+											<div class="row g-2 mb-3 justify-content-center">
+												<div class="col-auto text-center">
+													<button type="button" class="btn btn-primary me-2 ">Save</button>
+													<button type="button" class="btn btn-secondary me-2 ">Clear</button>
+													<button type="button" class="btn btn-danger me-2 ">Delete</button>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<!-- 16(d) Use in generation or distribution of power -->
+									<div class="mt-4 border rounded p-2">
+										<div class="fw-bold text-primary">(d) use in generation or distribution
+											of
+											power
+										</div>
+										<table class="table table-bordered table-sm text-center">
+											<thead class="table-light">
+												<tr>
+													<th>Select</th>
+													<th>View / Edit</th>
+													<th>Sr. No.</th>
+													<th>Name and Description of Goods/Commodity</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td colspan="4">No content in table</td>
+												</tr>
+											</tbody>
+										</table>
+
+
+										<div class="row g-2 mb-2">
+											<div class="col-md-6 d-flex align-items-center">
+												<label class="form-label me-2 mb-0" style="white-space: nowrap;">Name
+													and
+													Description of Goods/Commodity</label>
+												<select class="form-select form-select-sm" style="flex: 1;">
+													<option>Select</option>
+												</select>
+											</div>
+										</div>
+
+
+										<div class="row g-2 mb-3 justify-content-center">
+											<div class="col-auto text-center">
+												<button type="button" class="btn btn-primary me-2 ">Save</button>
+												<button type="button" class="btn btn-secondary me-2 ">Clear</button>
+												<button type="button" class="btn btn-danger me-2 ">Delete</button>
+											</div>
+										</div>
+									</div>
+
+									<!-- 16(e) Use in packing of goods -->
+									<div class="mt-4 border rounded p-2">
+										<div class="fw-bold text-primary">(e) use in the packing of goods for
+											sale/
+											resale
+										</div>
+										<table class="table table-bordered table-sm text-center">
+											<thead class="table-light">
+												<tr>
+													<th>Select</th>
+													<th>View / Edit</th>
+													<th>Sr. No.</th>
+													<th>Name and Description of Goods/Commodity</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td colspan="4">No content in table</td>
+												</tr>
+											</tbody>
+										</table>
+
+
+										<div class="row g-2 mb-2">
+											<div class="col-md-6 d-flex align-items-center">
+												<label class="form-label me-2 mb-0" style="white-space: nowrap;">Name
+													and
+													Description of Goods/Commodity</label>
+												<select class="form-select form-select-sm" style="flex: 1;">
+													<option>Select</option>
+												</select>
+											</div>
+										</div>
+
+
+										<div class="row g-2 mb-3 justify-content-center">
+											<div class="col-auto text-center">
+												<button type="button" class="btn btn-primary me-2 ">Save</button>
+												<button type="button" class="btn btn-secondary me-2 ">Clear</button>
+												<button type="button" class="btn btn-danger me-2 ">Delete</button>
+											</div>
+										</div>
+									</div>
+
+									<!-- Section 17 -->
+									<div class="mt-4 border rounded p-2">
+										<div class="fw-bold text-primary">(17) We manufacture, process or
+											extract in
+											mining
+											the
+											following classes of goods or generate or distribute the following
+											form
+											of
+											power,
+											namely.</div>
+										<table class="table table-bordered table-sm text-center">
+											<thead class="table-light">
+												<tr>
+													<th>Select</th>
+													<th>View / Edit</th>
+													<th>Sr. No.</th>
+													<th>Name and Description of Goods/Commodity</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td colspan="4">No content in table</td>
+												</tr>
+											</tbody>
+										</table>
+
+										<div class="row g-2 mb-2">
+											<div class="col-md-6 d-flex align-items-center">
+												<label class="form-label me-2 mb-0" style="white-space: nowrap;">Name
+													and
+													Description of Goods/Commodity</label>
+												<select class="form-select form-select-sm" style="flex: 1;">
+													<option>Select</option>
+												</select>
+											</div>
+										</div>
+
+
+										<div class="row g-2 mb-3 justify-content-center">
+											<div class="col-auto text-center">
+												<button type="button" class="btn btn-primary me-2 ">Save</button>
+												<button type="button" class="btn btn-secondary me-2 ">Clear</button>
+												<button type="button" class="btn btn-danger me-2 ">Delete</button>
+											</div>
+										</div>
+									</div>
+
+									<!-- Section 18 -->
+									<div class="mt-4">
+										<div class="form-check mb-2">
+											<input class="form-check-input" type="checkbox" id="truthCheck">
+											<label class="form-check-label" for="truthCheck">
+												(18) The above statements are true to the best of my knowledge
+												and
+												belief.
+												<span class="text-danger">*</span>
+											</label>
+										</div>
+										<div class="row g-2 mb-3">
+											<div class="col-md-6">
+												<label class="form-label">Name of Applicant in Full <span
+														class="text-danger">*</span></label>
+												<input type="text" class="form-control form-control-sm">
+											</div>
+											<div class="col-md-6">
+												<label class="form-label">Status in relation to the dealer <span
+														class="text-danger">*</span></label>
+												<input type="text" class="form-control form-control-sm">
+											</div>
+										</div>
+
+										<!-- Notes -->
+										<div class="mt-3">
+											<small class="text-danger d-block fw-bold">Note:</small>
+											<ul class="text-danger small">
+												<li>You are required to sign on the print out of this form as
+													generated
+													after
+													online submission at <a href="http://www.haryanatax.gov.in"
+														target="_blank">www.haryanatax.gov.in</a></li>
+												<li>All applicants are required to sign on such printout at
+													serial
+													number 11
+													and
+													same should be attested by witnesses</li>
+											</ul>
+										</div>
+
+										<!-- Validate Button -->
+										<div class="text-center mt-3">
+											<button class="btn btn-outline-primary">Validate CST Form A</button>
+										</div>
+									</div>
+
+
+
+								</fieldset>
+
+							</section>
+						</div>
+
+					</ng-container>
+				</div>
+			</div>
+		</div>
+	</section>
+</div>

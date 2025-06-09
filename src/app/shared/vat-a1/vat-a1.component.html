@@ -1,0 +1,101 @@
+<section>
+    <div class="container-fluid my-4">
+
+        <div class="border p-3 mb-3">
+            <h3 class="text-center">VAT & CST Registration</h3>
+            <div class="mb-3">
+                The following information is to be submitted by the
+                Proprietor/Partners/Director(s)/Karte of HUF/Authorized
+                Signatory/Principal Officer managing the business affairs of the
+                Company/Slociety/Association of
+                Persons/Club/Head
+                of the Department or any other officer duly authorized by him in
+                writing, on
+                behalf
+                of the business, for
+                application
+                for grant of a certificate of registration under the Haryana Value
+                Added
+                Tax
+                Act,
+                2003
+            </div>
+        </div>
+
+        <div class="bg-primary text-white p-2 fw-bold mb-3">
+            <h5 class="text-center">FORM VAT - A1</h5>
+            <div class="text-center">
+                [See rule 11(5)]
+                <br>
+                Application for the Grant of Registration under Section 11 of the
+                Haryana Value
+                Added Tax Act, 2003
+            </div>
+        </div>
+
+        <mat-horizontal-stepper [selectedIndex]="activedStep">
+            <mat-step *ngFor="let step of steps; let index = index; let last = last;">
+                <ng-template matStepLabel>{{ step.label }}</ng-template>
+
+                <ng-container *ngComponentOutlet="step.component"></ng-container>
+
+                <div class="btnvata1">
+                    <button *ngIf="index !== 0" matStepperPrevious type="button" (click)="prevStep(index)" class="btn btn-back">Back</button>
+                    <button *ngIf="!last" matStepperNext type="button" class="btn btn-next" [disabled]="!form.at(index).valid"
+                        (click)="nextStep(index)">Next</button>
+                        
+                    <button *ngIf="last" type="submit" class="btn btn-primary btn-lg" [disabled]="!form.valid">Submit</button>
+                </div>
+            </mat-step>
+        </mat-horizontal-stepper>
+
+
+        <!-- vat & cst heading removed from here and pasted above stepper  -->
+
+        <!-- Section 2: District -->
+
+        <!-- Section 3: Details of the Business -->
+
+        <!-- (6) Composition Scheme -->
+
+        <!-- (7) Commodities -->
+
+        <!-- (8) EAC (Economic Activity Code) -->
+
+        <!-- (9) Incurring liability -->
+
+        <!-- (10) Registration under Central Sales Tax Act -->
+
+        <!-- (11) Date of commencement of Business -->
+
+        <!-- (12) Date of Liability/Threshold reached -->
+
+        <!-- (13) Expected turnover of the Business -->
+
+        <!-- (14) License/permit required for commencement -->
+
+        <!-- (15) Script in which books of accounts maintained -->
+
+        <!-- (16) Business maintains its books of accounts as -->
+
+        <!-- (17) Sale invoices are issued -->
+
+        <!-- (18) Address of the Principal Place of Business in Haryana -->
+
+        <!-- (19) Contact Details of the Business -->
+
+        <!-- (20) Details of Bank Accounts of the Business -->
+
+        <!-- (21) Details of Immovable Properties Owned Wholly or Partly by the Business -->
+
+        <!-- (22) Details of All Applicants -->
+
+        <!-- (23) Details of Persons Authorized for Interface with the Department -->
+
+
+
+
+
+
+    </div>
+</section>

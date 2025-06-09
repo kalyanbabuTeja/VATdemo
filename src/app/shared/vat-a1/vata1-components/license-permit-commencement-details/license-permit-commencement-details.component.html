@@ -1,0 +1,27 @@
+<section>
+    <!-- (14) License/permit required for commencement -->
+    <div class="mb-3">
+        <div class="d-flex justify-content-between align-items-center">
+            <label for="licenseRequired" class="form-label mb-0" style="width: 50%;">
+                (14) Whether any license/permit required for the commencement of
+                Business is
+                to
+                be submitted along with
+                this application <span class="text-danger">*</span>
+            </label>
+            <select id="licenseRequired" class="form-select form-select-sm ms-2" style="width: 50%;" required
+                onchange="toggleLicenseInput()">
+                <option disabled selected value="">Select</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+        </div>
+
+        <!-- Hidden input that appears only when 'Yes' is selected -->
+        <div id="licenseInputContainer" class="mt-2 d-none">
+            <input type="text" id="licRequiredYes" class="form-control form-control-sm"
+                placeholder="Enter license/permit details" />
+        </div>
+    </div>
+</section>
+<!-- <p>license-permit-commencement-details works!</p> -->

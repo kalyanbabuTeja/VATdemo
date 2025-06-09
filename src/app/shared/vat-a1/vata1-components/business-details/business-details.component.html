@@ -1,0 +1,141 @@
+<!-- <p>business-details works!</p> -->
+<section>
+    <!-- Section 2: District -->
+    <div class="mb-4">
+        <label class="form-label fw-bold">To<br>The Assessing Authority,
+            <br>Excise and Taxation Department, Haryana
+        </label>
+        <div class="row align-items-center mb-3">
+            <div class="col-auto">
+                <label for="district" class="form-label mb-0">
+                    (a) District (where registration is sought)
+                    <span class="text-danger">*</span>
+                </label>
+            </div>
+            <div class="col-auto">
+                <select class="form-select form-select-sm" id="district" required>
+                    <option selected disabled value="">Select</option>
+                    <option>Ambala</option>
+                    <option>Faridabad</option>
+                    <option>Gurgaon</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section 3: Details of the Business -->
+    <fieldset class="border p-3 mb-4">
+        <legend class="w-auto px-2 fw-bold">Details of the Business</legend>
+
+        <!-- (1) Name & Style -->
+        <div class="mb-3 d-flex justify-content-between align-items-center">
+            <label for="businessName" class="form-label mb-0" style="width: 50%;">
+                (1) Name & Style of the Business <span class="text-danger">*</span>
+            </label>
+            <input type="text" id="businessName" class="form-control form-control-sm ms-2" style="width: 50%;"
+                required />
+        </div>
+
+        <!-- (2) Constitution -->
+        <div class="mb-3 d-flex justify-content-between align-items-center">
+            <label for="constitution" class="form-label mb-0" style="width: 50%;">
+                (2) Constitution of the Business <span class="text-danger">*</span>
+            </label>
+            <select id="constitution" class="form-select form-select-sm ms-2" style="width: 50%;" required>
+                <option disabled selected value="">Select</option>
+                <option>Private Limited Company</option>
+                <option>Proprietorship</option>
+                <option>Partnership</option>
+            </select>
+        </div>
+
+        <!-- (3) Trade Name -->
+        <div class="mb-3 d-flex justify-content-between align-items-center">
+            <label for="tradeName" class="form-label mb-0" style="width: 50%;">
+                (3) Trade Name of the Business (if different)
+            </label>
+            <input type="text" id="tradeName" class="form-control form-control-sm ms-2" style="width: 50%;" />
+        </div>
+
+        <!-- (4) PAN -->
+        <div class="mb-3 d-flex justify-content-between align-items-center">
+            <label for="pan" class="form-label mb-0" style="width: 50%;">
+                (4) PAN of Business/Proprietor <span class="text-danger">*</span>
+            </label>
+            <input type="text" id="pan" class="form-control form-control-sm ms-2" style="width: 50%;" required
+                maxlength="10" />
+        </div>
+
+        <!-- (5) Nature Of Business -->
+        <div class="mb-3 d-flex justify-content-between align-items-center">
+            <label for="nature" class="form-label mb-0" style="width: 50%;">
+                (5) Nature of Business <span class="text-danger">*</span>
+            </label>
+            <select id="nature" class="form-select form-select-sm ms-2" style="width: 50%;" required>
+                <option disabled selected value="">Select</option>
+                <option>Trading</option>
+                <option>Manufacturing</option>
+                <option>Service</option>
+            </select>
+        </div>
+
+        <!-- Nature of Business Section -->
+        <br>
+        <legend class="w-auto px-2 fw-bold">Nature of Business <span class="text-danger">*</span></legend>
+        <table class="table table-bordered" id="businessTable">
+            <thead class="table-light">
+                <tr>
+                    <th>Select</th>
+                    <th>Sr. No.</th>
+                    <th>Name</th>
+                    <th>Constitution</th>
+                    <th>Trade Name</th>
+                    <th>PAN</th>
+                    <th>Nature</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <!-- </fieldset> -->
+
+        <div class="row g-2 mb-3 justify-content-center">
+            <div class="col-auto text-center">
+                <button class="btn btn-primary me-2" type="button" id="saveBtn">Save</button>
+                <button class="btn btn-secondary me-2" type="button" id="clearBtn">Clear</button>
+                <button class="btn btn-danger" type="button" id="deleteBtn">Delete</button>
+            </div>
+        </div>
+    </fieldset>
+    <!-- Principal Economic Activity & Code  - (Nature of Business) -->
+    <div class="row mb-3 align-items-center">
+        <div class="col-md-3">
+            <label for="businessNature" class="form-label mb-0">Principal
+                Economic
+                Activity/Nature of Business <span class="text-danger">*</span></label>
+        </div>
+        <div class="col-md-3">
+            <select id="businessNature" class="form-select form-select-sm" required>
+                <option disabled selected value="">Select</option>
+                <option value="2">Trading</option>
+                <option value="3">Manufacturing</option>
+            </select>
+        </div>
+
+        <div class="col-md-3">
+            <label for="code" class="form-label mb-0">Code</label>
+        </div>
+        <div class="col-md-3">
+            <input type="text" id="code" class="form-control form-control-sm" value="2" readonly />
+        </div>
+    </div>
+    <!-- (11) Date of commencement of Business -->
+    <div class="mb-3 d-flex justify-content-between align-items-center">
+        <label for="commencementDate" class="form-label mb-0" style="width: 50%;">
+            (11) Date of commencement of Business in the State <span class="text-danger">*</span>
+        </label>
+        <input type="date" id="commencementDate" class="form-control form-control-sm ms-2" style="width: 50%;"
+            required />
+    </div>
+</section>
+
+<!-- <p>business-details works!</p> -->

@@ -1,0 +1,71 @@
+<section>
+    <!-- (8) EAC (Economic Activity Code) -->
+    <fieldset class="border p-3 mb-4">
+        <legend class="w-auto px-2">8. Economic Activity Code</legend>
+        <!-- EAC Code: Label and Input in the same line -->
+        <div class="row mb-3 align-items-center">
+            <div class="col-md-2">
+                <label for="eacCode" class="form-label mb-0">EAC Code</label>
+            </div>
+            <div class="col-md-4">
+                <input type="text" id="eacCode" class="form-control form-control-sm" value="20201" readonly />
+            </div>
+        </div>
+
+        <!-- Principal Economic Activity & Code -->
+
+
+        <!-- Type of Industry Description & Type of Industry Code -->
+        <div class="row mb-3 align-items-center">
+            <div class="col-md-3">
+                <label for="industryType" class="form-label mb-0">Type of
+                    Industry
+                    Description
+                    <span class="text-danger">*</span></label>
+            </div>
+            <div class="col-md-3">
+                <select id="industryType" class="form-select form-select-sm" required>
+                    <option disabled selected value="">Select</option>
+                    <option value="01">Work Contracts</option>
+                    <option value="02">Leasing</option>
+                    <option value="03">Traders</option>
+                </select>
+            </div>
+
+            <div class="col-md-3">
+                <label for="industryCode" class="form-label mb-0">Type of
+                    Industry
+                    Code</label>
+            </div>
+            <div class="col-md-3">
+                <input type="text" id="industryCode" class="form-control form-control-sm" value="02" readonly />
+            </div>
+        </div>
+
+        <!-- Product Description & Product Code -->
+        <div class="row align-items-center">
+            <div class="col-md-3">
+                <label for="productDescription" class="form-label mb-0">Product
+                    Description
+                    <span class="text-danger">*</span></label>
+            </div>
+            <div class="col-md-3">
+                <select id="productDescription" class="form-select form-select-sm" required>
+                    <option disabled selected value="">Select</option>
+                    <option value="01">Contracts relating to site work</option>
+                    <option value="02">Custom Construction</option>
+                    <option value="03">Any other works contracts</option>
+                </select>
+            </div>
+
+            <div class="col-md-3">
+                <label for="productCode" class="form-label mb-0">Product
+                    Code</label>
+            </div>
+            <div class="col-md-3">
+                <input type="text" id="productCode" class="form-control form-control-sm" value="01" readonly />
+            </div>
+        </div>
+    </fieldset>
+</section>
+<!-- <p>eac-details works!</p> -->
